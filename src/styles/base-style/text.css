@@ -1,0 +1,27 @@
+.text-center {
+  text-align: center;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fs-3 {
+  font-size: 3rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fs-1 {
+  font-size: 1rem;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.fs-1-5 {
+  font-size: 1.5rem;
+}

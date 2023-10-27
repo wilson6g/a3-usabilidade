@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/register.css" />
+    <title>Registro</title>
+  </head>
+
+  <body>
+    <main class="d-flex flex-s-column flex-lm-column vw-100 vh-100">
+      <aside
+        class="d-flex align-items-center w-s-100 w-lm-100 h-lm-60 justify-content-center w-60 h-100 bg-primary"
+      >
+        <img class="w-60 h-60" src="/src/img/logo.svg" alt="Nossa Logo" />
+      </aside>
+
+      <div
+        class="d-flex align-items-center justify-content-center flex-column w-s-100 w-lm-100 w-40 h-100"
+      >
+        <h1 class="text-center fw-600 fs-3">Registro</h1>
+        <form
+          method="post"
+          class="w-60 d-flex justify-content-center flex-column"
+        >
+          <label class="text-label d-flex p5-y" for="email">E-mail:</label>
+          <input
+            class="d-flex w-100 border-none text-input bg-secondary"
+            type="email"
+            name="email"
+            placeholder="Digite seu email."
+          />
+
+          <label class="text-label d-flex p5-y" for="name">Nome:</label>
+          <input
+            class="d-flex w-100 border-none text-input bg-secondary"
+            type="text"
+            name="name"
+            placeholder="Digite seu nome."
+          />
+
+          <label class="text-label d-flex p5-y" for="password">Senha:</label>
+          <input
+            class="d-flex w-100 border-none text-input bg-secondary"
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite sua senha."
+          />
+
+          <label class="text-label d-flex p5-y" for="repeat-password"
+            >Repetir senha:</label
+          >
+          <input
+            class="d-flex w-100 border-none text-input bg-secondary"
+            type="password"
+            name="repeat-password"
+            id="repeat-password"
+            placeholder="Repita sua senha."
+          />
+          <div
+            class="d-flex w-100 fs-1 align-items-center justify-content-center m1-0625-t"
+          >
+            <button
+              type="submit"
+              class="rounded p1 fs-1 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
+            >
+              Registrar
+            </button>
+          </div>
+        </form>
+        <p class="d-flex text-center flex-column">
+          Já tem uma conta? <a class="text-underline" href="#">Faça login.</a>
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

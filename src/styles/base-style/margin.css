@@ -1,0 +1,28 @@
+.m-0 {
+  margin: 0;
+}
+
+.m0-0625-r {
+  margin-right: calc(var(--space) * 0.652);
+}
+
+.m1-025-r {
+  margin-right: calc(var(--space) * 1.25);
+}
+
+.m1-0875-r {
+  margin-right: calc(var(--space) * 1.875);
+}
+
+.m0-0625-t {
+  margin-top: calc(var(--space) * 0.652);
+}
+.m1-025-t {
+  margin-top: calc(var(--space) * 1.25);
+}
+.m1-0625-t {
+  margin-top: calc(var(--space) * 1.625);
+}
+.m1-0875-t {
+  margin-top: calc(var(--space) * 1.875);
+}

@@ -1,0 +1,31 @@
+.p-0 {
+  padding: 0;
+}
+.p1 {
+  padding: var(--space);
+}
+.p0-0625-t {
+  padding-top: calc(var(--space) * 0.652);
+}
+.p1-025-t {
+  padding-top: calc(var(--space) * 1.25);
+}
+
+.p0-0625-l {
+  padding-left: calc(var(--space) * 0.652);
+}
+.p1-025-l {
+  padding-left: calc(var(--space) * 1.25);
+}
+
+.p5-y {
+  padding: 5px 0;
+}
+
+.p1-y {
+  padding: 1rem;
+}
+
+.p1-025-r {
+  padding-right: calc(var(--space) * 1.25);
+}

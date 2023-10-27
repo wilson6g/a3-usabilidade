@@ -1,0 +1,20 @@
+@import url(/src/styles/global.css);
+
+.text-input {
+  background-color: #ecf2f7;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.text-label {
+  font-size: 1.3em;
+}
+
+input::placeholder {
+  color: #a9adb6;
+  font-size: 1.2em;
+}
+
+input[type="submit"]:hover {
+  background: #134f80;
+}

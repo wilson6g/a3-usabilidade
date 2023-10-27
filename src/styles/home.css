@@ -1,0 +1,19 @@
+@import url(/src/styles/global.css);
+
+.hover-light-blue {
+  transition: all 0.3s; 
+  text-decoration: none;
+}
+
+.hover-light-blue .a:hover{
+  color: var(--color-tertiary);
+}
+
+.search {
+  border-radius: 3px;
+  width: 140px;
+}
+
+.topic {
+  margin: 10px;
+}
