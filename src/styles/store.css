@@ -1,0 +1,120 @@
+@import url(/src/styles/global.css);
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.hover-light-blue {
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.hover-light-blue .a:hover {
+  color: var(--color-tertiary);
+}
+
+.search {
+  border-radius: 3px;
+  width: 140px;
+}
+
+.topic {
+  margin: 10px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  vertical-align: text-bottom;
+  margin-right: 6px;
+}
+
+.menu-icon {
+
+  cursor: pointer;
+
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: 0.4s;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  display: none;
+  background-color: #333;
+  max-height: 100%; /* Defina a altura máxima para 100% */
+  width: 90%; /* Ocupa toda a largura da tela */
+  position: fixed; /* Mantém o menu fixo na tela */
+  top: 0;
+  left: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Torna a lista vertical */
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px; /* Adicione algum espaçamento entre os itens do menu */
+  text-align: center; /* Centralize o texto verticalmente */
+  width: 100%; /* Ocupa toda a largura do menu */
+  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+#menu-toggle:checked + .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .search {
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  .w-s-10 {
+    width: 10%;
+  }
+
+  .w-s-90 {
+    width: 90%;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    vertical-align: text-bottom;
+    margin-right: 6px;
+  }
+
+  .fs-13 {
+    font-size: 14px;
+  }
+
+
+  .d-s-block {
+    display: block;
+  }
+
+  .mobile-image {
+    width: 306px;
+    overflow: hidden;
+  }
+  
+}

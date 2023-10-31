@@ -5,3 +5,20 @@
 .bg-secondary {
   background-color: var(--color-secondary);
 }
+
+.bg-1 {
+  background-color: #0a0a0a;
+}
+
+.bg-2 {
+  background-color: #131414;
+}
+
+
+.bg-blue {
+  background-color: #1F7DD6;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}

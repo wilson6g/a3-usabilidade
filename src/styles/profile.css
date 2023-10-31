@@ -23,7 +23,7 @@
 
 /* -------------------- Center ---------------- */
 
-main {
+/* main {
     height: 57vh; 
     width: 55vw; 
     margin: 0 auto; 
@@ -32,21 +32,28 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+} */
+
+.main-profile {
+
+    max-width: 926px;
+    min-height: 224px;
+    background-color:#091742;
 }
 
 .menu-game {
+    background-color: #fff;
+    width: 94.2%;
     display: flex;
-    width: 51vw;
-    color: white;
-    margin-bottom: 4em;
-    padding-top: 2em;
-    
-    
 }
 .profile-info {
     display: flex;
     display: inline;    
     margin-top: -20px;    
+}
+
+.mr-2 {
+    margin-right: 20px;
 }
 
 .imagem{
