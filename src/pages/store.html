@@ -6,19 +6,20 @@
     <link rel="stylesheet" href="../styles/store.css" />
     <title>Home</title>
     <script src="./menu-open.js"></script>
+    <link rel="shortcut icon" href="../img/logo.svg">
   </head>
 
   <body>
     <header
-      class="d-flex align-items-center justify-content-center bg-primary w-mobile-100 w-100"
+      class="d-flex align-items-center justify-content-center bg-primary w-mobile-100 w-tablet-100 w-laptop-100 w-100"
     >
       <div
-        class="d-flex w-mobile-100 align-mobile-items-center align-mobile-items-center"
+        class="d-flex w-mobile-100 w-tablet-100 w-laptop-100 align-mobile-items-center align-mobile-items-center align-tablet-items-center align-laptop-items-center"
       >
         <div
-          class="hidden show-mobile d-flex align-mobile-items-center w-mobile-10 justify-mobile-content-center"
+          class="hidden d-flex align-mobile-items-center align-tablet-items-center align-laptop-items-center w-mobile-10 w-tablet-10 w-laptop-10 justify-mobile-content-center"
         >
-          <input type="checkbox" id="menu-toggle" class="hidden show-mobile" />
+          <input type="checkbox" id="menu-toggle" class="hidden" />
           <label for="menu-toggle" class="menu-icon">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -36,14 +37,14 @@
         </div>
 
         <div
-          class="w-mobile-90 d-flex justify-content-center align-items-center align-self-center"
+          class="w-mobile-90 w-tablet-90 w-laptop-90 d-flex justify-content-center align-items-center align-self-center"
         >
           <a href="/src/pages/store.html">
             <img class="w-80 h-80" src="/src/img/logo.svg" alt="Nossa Logo" />
           </a>
         </div>
       </div>
-      <nav class="w-50 hidden-mobile">
+      <nav class="w-50 hidden-mobile hidden-tablet hidden-laptop">
         <ul class="d-flex justify-content-between">
           <li>
             <a class="color-secondary" href="/src/pages/store.html">LOJA</a>
@@ -56,17 +57,17 @@
           </li>
         </ul>
       </nav>
-      <aside class="hidden-mobile">
+      <aside class="hidden-mobile hidden-tablet hidden-laptop">
         <p>Nick</p>
         <img src="#" alt="foto" />
       </aside>
     </header>
 
     <main
-      class="d-flex justify-content-center p1-025-t flex-mobile-column flex-1"
+      class="d-flex justify-content-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1"
     >
       <nav
-        class="d-flex justify-content-center w-25 m1-025-t hover-light-blue hidden-mobile"
+        class="d-flex justify-content-center w-25 m1-025-t hover-light-blue hidden-mobile hidden-tablet hidden-laptop"
       >
         <ul class="p1-025-l">
           <li>
@@ -115,15 +116,17 @@
       </nav>
 
       <div
-        class="d-flex flex-column align-items-start w-100 h-100 w-mobile-100 flex-mobile-column"
+        class="d-flex flex-column align-items-start w-100 h-100 w-mobile-100 w-tablet-100 w-laptop-100"
       >
         <nav
-          class="bg-primary d-flex align-mobile-items-center w-75 w-tablet-80 w-mobile-100 flex-mobile-column"
+          class="bg-primary d-flex align-mobile-items-center align-tablet-items-center align-laptop-items-center w-75 w-tablet-100 w-laptop-100 w-mobile-100 flex-mobile-column flex-tablet-column flex-laptop-column"
         >
           <ul
-            class="d-flex align-items-center d-mobile-block w-mobile-90 padding-right justify-content-around hover-light-blue flex-mobile-column p-0 w-100"
+            class="d-flex align-items-center d-mobile-block d-tablet-block d-laptop-block w-mobile-90 w-tablet-90 w-laptop-90 padding-right justify-content-around hover-light-blue flex-mobile-column flex-tablet-column flex-laptop-column p-0 w-100"
           >
-            <li class="w-mobile-100 d-flex align-mobile-items-center">
+            <li
+              class="w-mobile-100 w-tablet-100 w-laptop-100 d-tablet-block d-laptop-block d-flex  align-item-center align-mobile-items-center align-tablet-items-center align-laptop-items-center"
+            >
               <img
                 class="avatar"
                 src="https://avatars.akamai.steamstatic.com/7fab4ab782facae8c204f93371d90895c05f6c62.jpg"
@@ -135,18 +138,22 @@
                 >Sua biblioteca</a
               >
             </li>
-            <li class="w-mobile-100 d-mobile-block">
+            <li
+              class="w-mobile-100 w-tablet-100 w-laptop-100 d-laptop-block d-tablet-block d-mobile-block"
+            >
               <a class="color-secondary fs-13 lh-34 fw-600" href="#"
                 >Categorias</a
               >
             </li>
-            <li class="w-mobile-100 d-mobile-block">
+            <li
+              class="w-mobile-100 w-tablet-100 w-laptop-100 d-laptop-block d-tablet-block d-mobile-block"
+            >
               <a class="color-secondary fs-13 lh-34 fw-600" href="#"
                 >Plataformas</a
               >
             </li>
             <input
-              class="d-mobile-block border-none w-mobile-100 search"
+              class="d-mobile-block border-none w-mobile-100 w-tablet-100 w-laptop-100 d-laptop-block d-tablet-block search"
               type="search"
               name="search"
               id="search"
@@ -155,25 +162,27 @@
           </ul>
         </nav>
 
-        <!-- <div
-          class="d-flex w-75 flex-column align-items-center justify-content-center"
+        <div
+          class="d-flex w-75 w-mobile-100 w-tablet-100 w-laptop-100 flex-column align-items-center justify-content-center"
         >
           <div
             class="d-flex flex-column align-item-start justify-content-start m1-025-t h-90 w-100 mobile-image"
           >
-            <span class="title">Destaque</span> -->
-            <!-- <img class="mobile-image" src="../img/ragnarok.jpg" alt="" /> -->
-          <!-- </div> -->
+            <span class="title">Destaque</span>
+            <img class="mobile-image" src="../img/ragnarok.jpg" alt="" />
+          </div>
 
-          <!-- <div
-            class="d-flex flex-column justify-content-center align-items-center m1-025-t h-90 w-70 p1-y bg-primary"
+          <div
+            class="d-flex flex-column justify-content-center align-items-center teste w-100 m1-025-t bg-primary"
           >
             <div
-              class="d-flex justify-content-start align-item-start align-self-center"
+              class="d-flex justify-content-start align-item-start align-self-start p1-y"
             >
               <span class="title color-white">Navegue pelas categorias</span>
             </div>
-            <div class="d-flex m1-025-t">
+            <div
+              class="d-flex align-items-center justify-content-center m1-025-t grid w-100"
+            >
               <a
                 class="d-flex justify-content-center align-items-center bg-white color-primary btn"
                 href=""
@@ -190,88 +199,127 @@
                 >Por Plataforma</a
               >
             </div>
-          </div> -->
-          <!-- <div
+          </div>
+          <div
             class="d-flex flex-column align-item-start justify-content-start m1-025-t h-90 w-100 mobile-image"
-          > -->
-            <!-- <span class="title">LANÇAMENTO</span> -->
-            <!-- <img class="mobile-image" src="../img/csgo2.png" alt="" /> -->
-          <!-- </div> -->
+          >
+            <span class="title">LANÇAMENTO</span>
+            <img class="mobile-image" src="../img/csgo2.png" alt="" />
+          </div>
 
           <div
-            class="d-flex p1-y flex-column align-item-start justify-content-start m1-025-t h-90 w-100 mobile-image bg-secondary color-white w-100"
+            class="d-flex flex-column align-item-start justify-content-start m1-025-t h-90 w-mobile-100 bg-secondary color-white w-100"
           >
             <div class="color-primary">
               <span>Jogos</span>
             </div>
             <div
-              class="d-flex align-items-center justify-content-between w-100 bg-primary m1-025-t"
+              class="d-flex flex-mobile-column justify-mobile-content-center align-items-center justify-content-between w-100 bg-primary m1-025-t"
             >
               <img class="game-icon p1-y" src="../img/csgo2.png" />
               <div
-                class="d-flex flex-column justify-content-center align-item-start info w-50 p1-y h-100"
+                class="d-flex flex-column justify-content-between w-100 align-item-center h-100 aqui"
               >
-                <a class=" color-white fw-500">Counter Strike 2: Global Offensive</a>
-                <p class="  color-white ">Ação, Gratuito p/ Jogar</p>
+                <div
+                  class="d-flex flex-column align-item-center justify-content-center"
+                >
+                  <a class="color-white fw-500 name"
+                    >Counter Strike 2: Global Offensive</a
+                  >
+                  <p class="color-white">Ação, Gratuito p/ Jogar</p>
+                </div>
+                <div class="color-white fw-500 padding-bottom hidden-laptop hidden-4k">
+                  <span class="">Gratuito p/ Jogar</span>
+                </div>
               </div>
-              <div class="w-50 d-flex justify-content-end p1-y  color-white fw-500">
-                <span>Gratuito p/ Jogar</span>
+              <div class="color-white fw-500 padding-bottom hidden-mobile hidden-tablet">
+                <span class="name">Gratuito p/ Jogar</span>
               </div>
             </div>
             <div
-              class="d-flex align-items-center justify-content-between w-100 bg-primary m1-025-t"
+              class="d-flex flex-mobile-column justify-mobile-content-center align-items-center justify-content-between w-100 bg-primary m1-025-t"
             >
               <img class="game-icon p1-y" src="../img/muaway.jpg" />
               <div
-                class="d-flex flex-column justify-content-center align-item-start info w-50 p1-y h-100 "
+                class="d-flex flex-column justify-content-between w-100 align-item-center h-100 aqui"
               >
-                <a class=" color-white fw-500">Muaway</a>
-                <p class="  color-white ">Ação, Gratuito p/ Jogar</p>
+                <div
+                  class="d-flex flex-column align-item-center justify-content-center"
+                >
+                  <a class="color-white fw-500">Muaway</a>
+                  <p class="color-white">Ação, Gratuito p/ Jogar</p>
+                </div>
+                <div class="color-white fw-500 padding-bottom hidden-laptop hidden-4k">
+                  <span class="">Gratuito p/ Jogar</span>
+                </div>
               </div>
-              <div class="w-50 d-flex justify-content-end p1-y  color-white fw-500">
-                <span>Gratuito p/ Jogar</span>
+              <div class="color-white fw-500 padding-bottom hidden-mobile hidden-tablet">
+                <span class="name">Gratuito p/ Jogar</span>
               </div>
             </div>
             <div
-              class="d-flex align-items-center justify-content-between w-100 bg-primary m1-025-t"
+              class="d-flex flex-mobile-column justify-mobile-content-center align-items-center justify-content-between w-100 bg-primary m1-025-t"
             >
               <img class="game-icon p1-y" src="../img/wow.jpg" />
               <div
-                class="d-flex flex-column justify-content-center align-item-start info w-50 p1-y h-100"
+                class="d-flex flex-column justify-content-between w-100 align-item-center h-100 aqui"
               >
-                <a class=" color-white fw-500">World of Warcraft</a>
-                <p class="  color-white ">Ação, Gratuito p/ Jogar</p>
+                <div
+                  class="d-flex flex-column align-item-center justify-content-center"
+                >
+                  <a class="color-white fw-500">World of Warcraft</a>
+                  <p class="color-white">Ação, Gratuito p/ Jogar</p>
+                </div>
+                <div class="color-white fw-500 padding-bottom hidden-laptop hidden-4k">
+                  <span class="">Gratuito p/ Jogar</span>
+                </div>
               </div>
-              <div class="w-50 d-flex justify-content-end p1-y  color-white fw-500">
-                <span>Gratuito p/ Jogar</span>
+              <div class="color-white fw-500 padding-bottom hidden-mobile hidden-tablet">
+                <span class="name">Gratuito p/ Jogar</span>
               </div>
             </div>
             <div
-              class="d-flex align-items-center justify-content-between w-100 bg-primary m1-025-t"
+              class="d-flex flex-mobile-column justify-mobile-content-center align-items-center justify-content-between w-100 bg-primary m1-025-t"
             >
               <img class="game-icon p1-y" src="../img/lineage.jpg" />
               <div
-                class="d-flex flex-column justify-content-center align-item-start info w-50 p1-y h-100"
+                class="d-flex flex-column justify-content-between w-100 align-item-center h-100 aqui"
               >
-                <a class=" color-white fw-500">Lineage 2</a>
-                <p class="  color-white ">Ação, Gratuito p/ Jogar</p>
+                <div
+                  class="d-flex flex-column align-item-center justify-content-center"
+                >
+                  <a class="color-white fw-500">Lineage 2</a>
+                  <p class="color-white">Ação, Gratuito p/ Jogar</p>
+                </div>
+                <div class="color-white fw-500 padding-bottom hidden-laptop hidden-4k">
+                  <span class="">Gratuito p/ Jogar</span>
+                </div>
               </div>
-              <div class="w-50 d-flex justify-content-end p1-y  color-white fw-500">
-                <span>Gratuito p/ Jogar</span>
+              <div class="color-white fw-500 padding-bottom hidden-mobile hidden-tablet">
+                <span class="name">Gratuito p/ Jogar</span>
               </div>
             </div>
+
             <div
-              class="d-flex align-items-center justify-content-between w-100 bg-primary m1-025-t"
+              class="d-flex flex-mobile-column justify-mobile-content-center align-items-center justify-content-between w-100 bg-primary m1-025-t"
             >
               <img class="game-icon p1-y" src="../img/gunbound.jpg" />
               <div
-                class="d-flex flex-column justify-content-center align-item-start info w-50 p1-y h-100"
+                class="d-flex flex-column justify-content-between w-100 align-item-center h-100 aqui"
               >
-                <a class=" color-white fw-500">Gunbound</a>
-                <p class="  color-white ">Ação, Gratuito p/ Jogar</p>
+                <div
+                  class="d-flex flex-column align-item-center justify-content-center"
+                >
+                  <a class="color-white fw-500">Gunbound</a>
+                  <p class="color-white">Ação, Gratuito p/ Jogar</p>
+                </div>
+                <div class="color-white fw-500 padding-bottom hidden-laptop hidden-4k">
+                  <span class="">Gratuito p/ Jogar</span>
+                </div>
               </div>
-              <div class="w-50 d-flex justify-content-end p1-y  color-white fw-500">
-                <span>Gratuito p/ Jogar</span>
+              <div class="color-white fw-500 padding-bottom hidden-mobile hidden-tablet">
+                <span class="name">Gratuito p/ Jogar</span>
+              </div>
               </div>
             </div>
           </div>

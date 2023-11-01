@@ -13,7 +13,7 @@
   --color-secondary: #f7f6fc;
   --color-tertiary: #3eecfc;
   --color-black: #000;
-  --color-gray: #7F97A5;
+  --color-gray: #7f97a5;
   --min-screen-mobile: 320px;
   --min-screen-tablet: 481px;
   --min-screen-laptop: 769px;
@@ -56,6 +56,10 @@ button {
 
 .bottom-0 {
   bottom: 0;
+}
+
+.align-self-center {
+  align-self: center;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -214,12 +218,8 @@ button {
     width: 80%;
   }
 
-  .hidden {
-    display: none;
-  }
-
-  .hidden-tablet {
-    display: none;
+  .d-tablet-block {
+    display: block;
   }
 
   .visibility-tablet {
@@ -233,6 +233,7 @@ button {
   .w-tablet-100 {
     width: 100%;
   }
+
   .w-tablet-90 {
     width: 90%;
   }
@@ -296,15 +297,97 @@ button {
   .align-self-center {
     align-self: center;
   }
-  
+}
+@media only screen and (min-width: 1024px) and (max-width: 1024px) {
+  /* TODO */
+
+  .w-laptop-80 {
+    width: 80%;
+  }
+
+  .d-laptop-block {
+    display: block;
+  }
+
+  .visibility-laptop {
+    visibility: hidden;
+  }
+
+  .flex-laptop-column {
+    flex-direction: column;
+  }
+
+  .w-laptop-100 {
+    width: 100%;
+  }
+
+  .w-laptop-90 {
+    width: 90%;
+  }
+
+  .w-laptop-10 {
+    width: 10%;
+  }
+
+  .lh-34 {
+    line-height: 34px;
+  }
+
+  .padding-right {
+    padding-right: 10px;
+  }
+
+  .flex-laptop-row {
+    flex-direction: row;
+  }
+
+  .flex-laptop-column {
+    flex-direction: column;
+  }
+
+  .justify-laptop-content-center {
+    justify-content: center;
+  }
+
+  .justify-laptop-content-between {
+    justify-content: space-between;
+  }
+
+  .justify-laptop-content-around {
+    justify-content: space-around;
+  }
+
+  .justify-laptop-content-evelyn {
+    justify-content: space-evenly;
+  }
+
+  .justify-laptop-content-start {
+    justify-content: flex-start;
+  }
+
+  .justify-laptop-content-end {
+    justify-content: flex-end;
+  }
+
+  .align-laptop-items-center {
+    align-items: center;
+  }
+
+  .align-laptop-items-end {
+    align-items: flex-end;
+  }
+
+  .align-laptop-items-start {
+    align-items: flex-start;
+  }
+
+  .align-self-center {
+    align-self: center;
+  }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 2559px) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
   /* TODO */
-  .hidden {
-    display: none;
-  }
-  
   .hidden-laptop {
     display: none;
   }
@@ -390,7 +473,6 @@ button {
   .hidden {
     display: none;
   }
-  
 }
 
 @media only screen and (min-width: 2560px) {
@@ -398,5 +480,4 @@ button {
   .hidden {
     display: none;
   }
-  
 }
