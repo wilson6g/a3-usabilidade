@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/info-game.css" />
+    <title>Dominus</title>
+    <script src="./menu-open.js"></script>
+    <link rel="shortcut icon" href="../img/logo.svg" />
+  </head>
+
+  <body>
+    <header
+      class="d-flex align-items-center justify-content-center bg-primary w-mobile-100 w-tablet-100 w-laptop-100 w-100"
+    >
+      <div
+        class="d-flex w-mobile-100 w-tablet-100 w-laptop-100 align-mobile-items-center align-mobile-items-center align-tablet-items-center align-laptop-items-center"
+      >
+        <div
+          class="hidden d-flex align-mobile-items-center align-tablet-items-center align-laptop-items-center w-mobile-10 w-tablet-10 w-laptop-10 justify-mobile-content-center"
+        >
+          <input type="checkbox" id="menu-toggle" class="hidden" />
+          <label for="menu-toggle" class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </label>
+          <nav class="menu d-flex w-100 h-100 flex-column">
+            <ul>
+              <li>
+                <a
+                  class="text-uppercase color-secondary"
+                  href="/src/pages/store.html"
+                  >Loja</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-uppercase color-secondary"
+                  href="/src/pages/profile.html"
+                  >Nick do Usuário</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-uppercase color-secondary"
+                  href="/src/pages/games.html"
+                  >Meus jogos</a
+                >
+              </li>
+              <li><a href="/src/pages/login.html" id="sair">Sair</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div
+          class="w-mobile-90 w-tablet-90 w-laptop-90 d-flex justify-content-center align-items-center align-self-center"
+        >
+          <a href="/src/pages/store.html">
+            <img class="w-80 h-80" src="/src/img/logo.svg" alt="Nossa Logo" />
+          </a>
+        </div>
+      </div>
+      <nav class="w-50 hidden-mobile hidden-tablet hidden-laptop">
+        <ul class="d-flex justify-content-between">
+          <li>
+            <a
+              class="text-uppercase color-secondary"
+              href="/src/pages/store.html"
+              >Loja</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-uppercase color-secondary"
+              href="/src/pages/profile.html"
+              >Nick do Usuário</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-uppercase color-secondary"
+              href="/src/pages/games.html"
+              >Meus jogos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      class="d-flex justify-content-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1"
+    >
+      <div
+        class="d-flex flex-column p align-item-center justify-content-start w-50 h-100 bg-blue border-light"
+      >
+        <div
+          class="d-flex flex-column justify-content-center align-item-center w-100 h-100"
+        >
+          <span class="color-white fw-600 p-1-b title">Counter-Strike 2</span>
+          <div
+            class="d-flex flex-column justify-content-center align-item-center"
+          >
+            <div class="d-flex w-100 justify-content-between">
+              <img class="image p-06-r" src="../img/csgo2.png" />
+              <div
+                class="d-flex flex-column align-item-end justify-content-start p-06-r"
+              >
+                <a
+                  href="./games.html"
+                  class="w-100 button text-uppercase fw-600"
+                >
+                  Adicionar a minha lista de jogos
+                </a>
+              </div>
+            </div>
+            <div class="w-50">
+              <p class="color-white bio">
+                Há mais de duas décadas, o Counter-Strike oferece uma
+                experiência competitiva de elite moldada por milhões de
+                jogadores mundialmente. Agora, o próximo capítulo da história do
+                CS vai começar. Isso é Counter-Strike 2.
+              </p>
+            </div>
+          </div>
+
+          <p class="color-white">
+            <a class="fw-600 text-uppercase">Data de Lançamento:</a>
+            21/ago./2012
+          </p>
+
+          <p class="color-white">
+            <a class="fw-600 text-uppercase">Plataforma:</a>
+            Microsoft Windows, Linux
+          </p>
+
+          <p class="color-white">
+            <a class="fw-600 text-uppercase">Categorias:</a> FPS, Tiro,
+            Multijogador
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="d-flex flex-column m1-0625-t align-items-center justify-content-center align-mobile-items-center justify-mobile-content-between bg-primary w-100 h-30"
+    >
+      <div
+        class="d-flex hidden-mobile flex-row align-items-center justify-content-center w-50"
+      >
+        <div class="topic">
+          <span class="color-secondary">Desenvolvimento de Habilidades:</span>
+          <p class="color-secondary">
+            Os jogos podem melhorar a resolução de problemas, o pensamento
+            estratégico e a tomada de decisões rápida.
+          </p>
+        </div>
+        <div class="topic">
+          <span class="color-secondary">Entretenimento Social:</span>
+          <p class="color-secondary">
+            Muitos jogos oferecem modos multiplayer que permitem que os
+            jogadores se conectem com amigos e pessoas de todo o mundo.
+          </p>
+        </div>
+        <div class="topic">
+          <span class="color-secondary">Alívio do Estresse e Diversão:</span>
+          <p class="color-secondary">
+            Em um mundo agitado, os jogos podem ser uma maneira relaxante de
+            aliviar o estresse.
+          </p>
+        </div>
+      </div>
+      <hr
+        class="bc-secondary w-mobile-90 hidden-mobile"
+        size="2"
+        width="55%"
+        noshade="2"
+      />
+      <div
+        class="d-flex flex-row align-items-center justify-content-between w-55 w-mobile-90"
+      >
+        <div class="w-mobile-90">
+          <a href="/src/pages/home.html">
+            <img class="logo" src="/src/img/logo.svg" alt="Nossa Logo" />
+          </a>
+        </div>
+        <p class="fs-1-5 color-secondary">Encontre, Jogue, Viva</p>
+      </div>
+    </footer>
+  </body>
+</html>
