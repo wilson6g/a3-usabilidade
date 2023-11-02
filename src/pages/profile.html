@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/profile.css" />
-    <title>Library</title>
+    <title>Perfil</title>
+    <script src="./menu-open.js"></script>
     <link rel="shortcut icon" href="../img/logo.svg" />
   </head>
 
@@ -26,10 +27,15 @@
           </label>
           <nav class="menu d-flex w-100 h-100 flex-column">
             <ul>
-              <li><a href="#">Página Inicial</a></li>
-              <li><a href="#">Sobre Nós</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">Contato</a></li>
+              <li>
+                <a class="text-uppercase color-secondary" href="/src/pages/store.html">Loja</a>
+              </li>
+              <li>
+                <a class="text-uppercase color-secondary" href="/src/pages/profile.html">Nick do Usuário</a>
+              </li>
+              <li>
+                <a class="text-uppercase color-secondary" href="/src/pages/games.html">Meus jogos</a>
+              </li>
               <li><a href="#" id="sair">Sair</a></li>
             </ul>
           </nav>
@@ -46,15 +52,25 @@
       <nav class="w-50 hidden-mobile hidden-tablet hidden-laptop">
         <ul class="d-flex justify-content-between">
           <li>
-            <a class="text-uppercase color-secondary" href="/src/pages/store.html">Loja</a>
+            <a
+              class="text-uppercase color-secondary"
+              href="/src/pages/store.html"
+              >Loja</a
+            >
           </li>
           <li>
-            <a class="text-uppercase color-secondary" href="/src/pages/profile.html"
+            <a
+              class="text-uppercase color-secondary"
+              href="/src/pages/profile.html"
               >Nick do Usuário</a
             >
           </li>
           <li>
-            <a class="text-uppercase color-secondary" href="#conversa">Meus jogos</a>
+            <a
+              class="text-uppercase color-secondary"
+              href="/src/pages/games.html"
+              >Meus jogos</a
+            >
           </li>
         </ul>
       </nav>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/store.css" />
-    <title>Home</title>
+    <title>Loja</title>
     <script src="./menu-open.js"></script>
     <link rel="shortcut icon" href="../img/logo.svg">
   </head>
@@ -27,10 +27,15 @@
           </label>
           <nav class="menu d-flex w-100 h-100 flex-column">
             <ul>
-              <li><a href="#">Página Inicial</a></li>
-              <li><a href="#">Sobre Nós</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">Contato</a></li>
+              <li>
+                <a class="text-uppercase color-secondary" href="/src/pages/store.html">Loja</a>
+              </li>
+              <li>
+                <a class="text-uppercase color-secondary" href="/src/pages/profile.html">Nick do Usuário</a>
+              </li>
+              <li>
+                <a class="text-uppercase color-secondary" href="/src/pages/games.html">Meus jogos</a>
+              </li>
               <li><a href="#" id="sair">Sair</a></li>
             </ul>
           </nav>
@@ -70,13 +75,7 @@
             <span class="color-black">Categorias</span>
             <ul class="p1-025-l">
               <li>
-                <a class="color-primary" href="#ação">Ação</a>
-              </li>
-              <li>
-                <a class="color-primary" href="#esporte">Esportes</a>
-              </li>
-              <li>
-                <a class="color-primary" href="#rpg">Rpg</a>
+                <a class="color-primary" href="category.html">Ação</a>
               </li>
             </ul>
           </li>
@@ -84,13 +83,7 @@
             <span class="color-black">Plataformas</span>
             <ul class="p1-025-l">
               <li>
-                <a class="color-primary" href="#windows">Windows</a>
-              </li>
-              <li>
-                <a class="color-primary" href="#linux">Linux</a>
-              </li>
-              <li>
-                <a class="color-primary" href="#macOS">Mac OS</a>
+                <a class="color-primary" href="platform.html">Windows</a>
               </li>
             </ul>
           </li>
@@ -98,13 +91,7 @@
             <span class="color-black">Notas</span>
             <ul class="p1-025-l">
               <li>
-                <a class="color-primary" href="#item1">Item 1</a>
-              </li>
-              <li>
-                <a class="color-primary" href="#item2">Item 2</a>
-              </li>
-              <li>
-                <a class="color-primary" href="#item3">Item 3</a>
+                <a class="color-primary" href="grade.html">Nota 5</a>
               </li>
             </ul>
           </li>
@@ -130,21 +117,21 @@
               />
               <a
                 class="color-secondary fs-13 lh-34 fw-600 align-self-center"
-                href="#"
+                href="profile.html"
                 >Meus Jogos</a
               >
             </li>
             <li
               class="w-mobile-100 w-tablet-100 w-laptop-100 d-laptop-block d-tablet-block d-mobile-block"
             >
-              <a class="color-secondary fs-13 lh-34 fw-600" href="#"
+              <a class="color-secondary fs-13 lh-34 fw-600" href="category.html"
                 >Categorias</a
               >
             </li>
             <li
               class="w-mobile-100 w-tablet-100 w-laptop-100 d-laptop-block d-tablet-block d-mobile-block"
             >
-              <a class="color-secondary fs-13 lh-34 fw-600" href="#"
+              <a class="color-secondary fs-13 lh-34 fw-600" href="platform.html"
                 >Plataformas</a
               >
             </li>

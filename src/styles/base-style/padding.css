@@ -26,6 +26,10 @@
   padding: 1rem;
 }
 
+.p-06-r {
+  padding-right: 0.6rem;
+}
+
 .p1-025-r {
   padding-right: calc(var(--space) * 1.25);
 }

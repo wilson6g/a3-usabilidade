@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/src/styles/register.css" />
     <title>Registro</title>
     <link rel="shortcut icon" href="../img/logo.svg">
+    <script src="./register.js"></script>
+    <script src="../util/validations.js"></script>
   </head>
 
   <body>
@@ -23,12 +25,14 @@
         <form
           method="post"
           class="w-60 d-flex justify-content-center flex-column"
+          onsubmit="register(event)"
         >
           <label class="text-label d-flex p5-y" for="email">E-mail:</label>
           <input
             class="d-flex w-100 border-none text-input bg-secondary"
             type="email"
             name="email"
+            id="email"
             placeholder="Digite seu email."
           />
 
@@ -37,6 +41,7 @@
             class="d-flex w-100 border-none text-input bg-secondary"
             type="text"
             name="name"
+            id="name"
             placeholder="Digite seu nome."
           />
 
@@ -64,14 +69,15 @@
           >
             <button
               type="submit"
-              class="rounded p1 fs-1 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
+              
+              class="border-rounded p1 fs-1 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
             >
               Registrar
             </button>
           </div>
         </form>
         <p class="d-flex text-center flex-column">
-          Já tem uma conta? <a class="text-underline" href="#">Faça login.</a>
+          Já tem uma conta? <a class="text-underline" href="login.html">Faça login.</a>
         </p>
       </div>
     </main>

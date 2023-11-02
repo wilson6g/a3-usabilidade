@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="../img/logo.svg" />
 
     <title>Login</title>
+    <script src="./login.js"></script>
+    <script src="../util/validations.js"></script>
+    <script src="./register.js"></script>
   </head>
 
   <body>
@@ -25,11 +28,13 @@
         class="d-flex align-items-center justify-content-center flex-column w-mobile-100 w-lm-100 w-40 h-100"
       >
         <h1 class="text-center fw-600 fs-3">Login</h1>
-        <form method="post" class="w-60">
+        <form method="post" class="w-60" onsubmit="login(event)">
           <label class="text-label d-flex p5-y" for="email"> Email </label>
           <input
             type="email"
             name="email"
+            id="email"
+            required
             class="d-flex w-100 border-none text-input bg-secondary"
             placeholder="seuemail@exemplo.com"
           />
@@ -38,30 +43,18 @@
           <input
             type="password"
             name="password"
+            id="password"
+            required
             class="d-flex w-100 border-none text-input bg-secondary"
             placeholder="Senha"
           />
-
-          <!-- <div
-            class="d-flex align-items-center justify-content-between fw-400 fs-1 container-remember w-mobile-100 w-lm-100 flex-mobile-column flex-lm-column"
-          >
-            <label class="d-flex" for="remember">
-              <input
-                type="checkbox"
-                name="remember"
-                class="d-flex w-100 border-none text-input bg-secondary"
-              />
-              Lembrar
-            </label>
-            <a href="#" class="text-underline"> Esqueceu a senha? </a>
-          </div> -->
 
           <div
             class="d-flex w-100 align-items-center justify-content-center m1-025-t"
           >
             <button
               type="submit"
-              class="rounded p1 fs-1 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
+              class="border-rounded p1 fs-1 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
             >
               Entrar
             </button>
@@ -69,7 +62,7 @@
 
           <p class="d-flex text-center flex-column">
             Não tem uma conta?
-            <a class="text-underline" href="#"> Cadastre-se </a>
+            <a class="text-underline" href="register.html"> Cadastre-se </a>
           </p>
         </form>
       </div>
