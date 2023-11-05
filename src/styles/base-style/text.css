@@ -6,9 +6,13 @@
   font-weight: 600;
 }
 
-.fs-3 {
-  font-size: 3rem;
+.fw-200 {
+  font-weight: 200;
 }
+
+/* .fs-3 {
+  font-size: 3rem;
+} */
 
 .fw-500 {
   font-weight: 500;
@@ -18,22 +22,54 @@
   font-weight: 400;
 }
 
-.fs-1 {
-  font-size: 1rem;
+.text-overflow-ellipses {
+  text-overflow: ellipsis;
 }
 
-.text-underline {
+.text-decoration-underline {
   text-decoration: underline;
+}
+
+.text-decoration-none {
+  text-decoration: none;
 }
 
 .text-uppercase {
   text-transform: uppercase;
 }
 
-.fs-1-5 {
-  font-size: 1.5rem;
+.text-lowercase {
+  text-transform: lowercase;
 }
 
-.text-light {
-  color: #FFF;
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.fs-1 {
+  font-size: calc(var(--space) * 0.25);
+}
+
+.fs-2 {
+  font-size: calc(var(--space) * 0.5);
+}
+
+.fs-3 {
+  font-size: calc(var(--space) * 1);
+}
+
+.fs-4 {
+  font-size: calc(var(--space) * 1.25);
+}
+
+.fs-5 {
+  font-size: calc(var(--space) * 1.50);
+}
+
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.text-justify {
+  text-align: justify;
 }

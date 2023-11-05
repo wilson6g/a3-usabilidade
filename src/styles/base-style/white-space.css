@@ -1,0 +1,15 @@
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+.white-space-normal {
+  white-space: normal;
+}
+
+.white-space-pre {
+  white-space: pre;
+}
+
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}

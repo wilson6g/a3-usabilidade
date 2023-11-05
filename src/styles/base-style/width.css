@@ -1,0 +1,253 @@
+.vw-100 {
+  width: 100vw;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-15 {
+  width: 15%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-55 {
+  width: 55%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-85 {
+  width: 85%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 599px) {
+  .w-mobile-10 {
+    width: 10%;
+  }
+
+  .w-mobile-15 {
+    width: 15%;
+  }
+
+  .w-mobile-20 {
+    width: 20%;
+  }
+
+  .w-mobile-25 {
+    width: 25%;
+  }
+
+  .w-mobile-30 {
+    width: 30%;
+  }
+
+  .w-mobile-40 {
+    width: 40%;
+  }
+
+  .w-mobile-50 {
+    width: 50%;
+  }
+
+  .w-mobile-55 {
+    width: 55%;
+  }
+
+  .w-mobile-60 {
+    width: 60%;
+  }
+
+  .w-mobile-70 {
+    width: 70%;
+  }
+
+  .w-mobile-75 {
+    width: 75%;
+  }
+
+  .w-mobile-80 {
+    width: 80%;
+  }
+
+  .w-mobile-85 {
+    width: 85%;
+  }
+
+  .w-mobile-90 {
+    width: 90%;
+  }
+
+  .w-mobile-100 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  /* TODO */
+
+  .w-tablet-10 {
+    width: 10%;
+  }
+
+  .w-tablet-15 {
+    width: 15%;
+  }
+
+  .w-tablet-20 {
+    width: 20%;
+  }
+
+  .w-tablet-25 {
+    width: 25%;
+  }
+
+  .w-tablet-30 {
+    width: 30%;
+  }
+
+  .w-tablet-40 {
+    width: 40%;
+  }
+
+  .w-tablet-50 {
+    width: 50%;
+  }
+
+  .w-tablet-55 {
+    width: 55%;
+  }
+
+  .w-tablet-60 {
+    width: 60%;
+  }
+
+  .w-tablet-70 {
+    width: 70%;
+  }
+
+  .w-tablet-75 {
+    width: 75%;
+  }
+
+  .w-tablet-80 {
+    width: 80%;
+  }
+
+  .w-tablet-85 {
+    width: 85%;
+  }
+
+  .w-tablet-90 {
+    width: 90%;
+  }
+
+  .w-tablet-100 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  /* TODO */
+
+  .w-laptop-10 {
+    width: 10%;
+  }
+
+  .w-laptop-15 {
+    width: 15%;
+  }
+
+  .w-laptop-20 {
+    width: 20%;
+  }
+
+  .w-laptop-25 {
+    width: 25%;
+  }
+
+  .w-laptop-30 {
+    width: 30%;
+  }
+
+  .w-laptop-40 {
+    width: 40%;
+  }
+
+  .w-laptop-50 {
+    width: 50%;
+  }
+
+  .w-laptop-55 {
+    width: 55%;
+  }
+
+  .w-laptop-60 {
+    width: 60%;
+  }
+
+  .w-laptop-70 {
+    width: 70%;
+  }
+
+  .w-laptop-75 {
+    width: 75%;
+  }
+
+  .w-laptop-80 {
+    width: 80%;
+  }
+
+  .w-laptop-85 {
+    width: 85%;
+  }
+
+  .w-laptop-90 {
+    width: 90%;
+  }
+
+  .w-laptop-100 {
+    width: 100%;
+  }
+}

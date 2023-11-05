@@ -6,22 +6,14 @@
   background-color: var(--color-secondary);
 }
 
-.bg-1 {
-  background-color: #0a0a0a;
-}
-
-.bg-2 {
-  background-color: #131414;
-}
-
 .bg-dark-blue {
-  background-color:#091742;
+  background-color: #091742;
 }
 
 .bg-blue {
-  background-color: #1F7DD6;
+  background-color: #1f7dd6;
 }
 
 .bg-white {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }

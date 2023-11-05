@@ -1,34 +1,26 @@
 @import url(/src/styles/global.css);
 
-.title {
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-  align-self: flex-start;
-}
-
 .search {
   padding: 0.6rem;
-  width: 100%;
   border-radius: 5px;
 }
 
-.hover-light-blue {
-  transition: all 0.3s;
-  text-decoration: none;
+.topic {
+  margin: 10px;
 }
 
-.hover-light-blue .a:hover {
-  color: var(--color-tertiary);
+.avatar {
+  width: 42px;
+  height: 42px;
+  vertical-align: text-bottom;
+  margin-right: 6px;
 }
 
-.search {
-  border-radius: 3px;
-  width: 140px;
-}
-
-.teste {
-  padding-bottom: 2%;
+.mobile-image {
+  width: 920px;
+  max-width: 960px;
+  max-height: 960px;
+  overflow: hidden;
 }
 
 .grid {
@@ -39,104 +31,10 @@
   align-items: center;
 }
 
-.topic {
-  margin: 10px;
-}
-
-.btn {
-  height: 58px;
-  width: 240px;
-  border-radius: 3px;
-  margin-left: 10px;
-}
-
-.avatar {
-  width: 42px;
-  height: 42px;
-  vertical-align: text-bottom;
-  margin-right: 6px;
-}
-
-.menu-icon {
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px auto;
-  transition: 0.4s;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu {
-  display: none;
-  background-color: #333;
-  max-height: 100%; /* Defina a altura máxima para 100% */
-  width: 90%; /* Ocupa toda a largura da tela */
-  position: fixed; /* Mantém o menu fixo na tela */
-  top: 0;
-  left: 0;
-}
-
-.game-icon {
-  width: 220px;
-  max-width: 220px;
-  max-height: 120px;
-  height: 120px;
-  min-width: 220px;
-  min-height: 120px;
-}
-
-.mobile-image {
-  width: 920px;
-  max-width: 960px;
-  max-height: 960px;
-  overflow: hidden;
-}
-
-.menu ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column; /* Torna a lista vertical */
-}
-
-.menu ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  padding: 10px; /* Adicione algum espaçamento entre os itens do menu */
-  text-align: center; /* Centralize o texto verticalmente */
-  width: 100%; /* Ocupa toda a largura do menu */
-  box-sizing: border-box; /* Garante que o padding não aumente a largura */
-}
-
-#menu-toggle:checked + .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-}
-
-.name {
-  font-size: 1.25em;
-  line-height: 18px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  overflow: hidden;
-  transition: color 0.25s;
-}
-
-@media only screen and (min-width: 0px) and (max-width: 425px) {
+@media only screen and (max-width: 599px) {
   .search {
-    border-radius: 3px;
     width: 100%;
+    border-radius: 3px;
   }
 
   .grid {
@@ -147,77 +45,24 @@
     align-items: center;
   }
 
-  .game-icon {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
-
-  .padding-bottom {
-    padding-bottom: 1rem;
-  }
-
-  .aqui {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-top: 6px;
-    font-size: 12px;
-  }
-
-  .name {
-    font-size: 1.25em;
-    line-height: 18px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: block;
-    overflow: hidden;
-    transition: color 0.25s;
-  }
-
-  .teste {
-    padding-bottom: 5%;
-  }
-
-  .w-s-10 {
-    width: 10%;
-  }
-
-  .w-s-90 {
-    width: 90%;
-  }
-
   .avatar {
-    width: 32px;
-    height: 32px;
-    vertical-align: text-bottom;
-    margin-right: 6px;
-  }
-
-  .fs-13 {
-    font-size: 14px;
-  }
-
-  .d-s-block {
-    display: block;
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
   }
 
   .mobile-image {
-    width: 306px;
-    max-width: 306px;
-    max-height: 306px;
-    overflow: hidden;
+    width: 100%; /* Ajuste a largura para preencher a largura da tela */
+    max-width: none; /* Remova o máximo de largura */
+    max-height: none; /* Remova o máximo de altura */
+    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
   }
 }
 
-@media only screen and (min-width: 426px) and (max-width: 768px) {
-  .hidden-tablet {
-    display: none;
-  }
-
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
   .search {
-    border-radius: 3px;
     width: 100%;
+    border-radius: 3px;
   }
 
   .grid {
@@ -228,146 +73,24 @@
     align-items: center;
   }
 
-  .game-icon {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
-
-  .padding-bottom {
-    padding-bottom: 1rem;
-  }
-
-  .aqui {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-top: 6px;
-    font-size: 12px;
-  }
-
-  .name {
-    font-size: 1.25em;
-    line-height: 18px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: block;
-    overflow: hidden;
-    transition: color 0.25s;
-  }
-
-  .teste {
-    padding-bottom: 5%;
-  }
-
-  .w-s-10 {
-    width: 10%;
-  }
-
-  .w-s-90 {
-    width: 90%;
-  }
-
   .avatar {
-    width: 32px;
-    height: 32px;
-    vertical-align: text-bottom;
-    margin-right: 6px;
-  }
-
-  .fs-13 {
-    font-size: 14px;
-  }
-
-  .d-s-block {
-    display: block;
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
   }
 
   .mobile-image {
-    width: 600px;
-    max-width: 600px;
-    max-height: 600px;
-    overflow: hidden;
+    width: 100%; /* Ajuste a largura para preencher a largura da tela */
+    max-width: none; /* Remova o máximo de largura */
+    max-height: none; /* Remova o máximo de altura */
+    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
-  .hidden-tablet {
-    display: none;
-  }
 
-  .search {
-    border-radius: 3px;
-    width: 100%;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(1, 3fr);
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-  }
-
-  .game-icon {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
-
-  .padding-bottom {
-    padding-bottom: 1rem;
-  }
-
-  .aqui {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-top: 6px;
-    font-size: 12px;
-  }
-
-  .teste {
-    padding-bottom: 5%;
-  }
-
-  .w-s-10 {
-    width: 10%;
-  }
-
-  .w-s-90 {
-    width: 90%;
-  }
-
-  .avatar {
-    width: 32px;
-    height: 32px;
-    vertical-align: text-bottom;
-    margin-right: 6px;
-  }
-
-  .fs-13 {
-    font-size: 14px;
-  }
-
-  .d-s-block {
-    display: block;
-  }
-
-  .mobile-image {
-    width: 850px;
-    max-width: 850px;
-    max-height: 600px;
-    overflow: hidden;
-  }
-}
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  .hidden-laptop {
-    display: none;
-  }
-
   .search {
-    border-radius: 3px;
     width: 100%;
+    border-radius: 3px;
   }
 
   .grid {
@@ -377,57 +100,17 @@
     justify-items: center;
     align-items: center;
   }
-  
-
-  .game-icon {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
-
-  .padding-bottom {
-    padding-bottom: 1rem;
-  }
-
-  .aqui {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-top: 6px;
-    font-size: 12px;
-  }
-
-  .teste {
-    padding-bottom: 5%;
-  }
-
-  .w-s-10 {
-    width: 10%;
-  }
-
-  .w-s-90 {
-    width: 90%;
-  }
 
   .avatar {
-    width: 32px;
-    height: 32px;
-    vertical-align: text-bottom;
-    margin-right: 6px;
-  }
-
-  .fs-13 {
-    font-size: 14px;
-  }
-
-  .d-s-block {
-    display: block;
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
   }
 
   .mobile-image {
-    width: 850px;
-    max-width: 850px;
-    max-height: 600px;
-    overflow: hidden;
+    width: 100%; /* Ajuste a largura para preencher a largura da tela */
+    max-width: none; /* Remova o máximo de largura */
+    max-height: none; /* Remova o máximo de altura */
+    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
   }
 }
