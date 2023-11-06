@@ -1,10 +1,5 @@
 @import url(/src/styles/global.css);
 
 @media only screen and (max-width: 599px) {
-  .game-icon {
-    width: 50%;
-    /* height: auto; */
-    vertical-align: middle;
-  }
 
 }

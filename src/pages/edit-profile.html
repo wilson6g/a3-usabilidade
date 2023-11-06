@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/styles/profile.css" />
+    <link rel="stylesheet" href="../styles/edit-profile.css" />
     <title>Perfil</title>
     <script src="./menu-open.js"></script>
+    <script src="./edit-profile.js"></script>
     <link rel="shortcut icon" href="../img/logo.svg" />
   </head>
 
@@ -89,95 +90,51 @@
     </header>
 
     <main
-      class="d-flex justify-content-center align-item-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1"
+      class="d-flex justify-content-center align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1"
     >
       <div
-        class="d-flex justify-content-center align-item-center flex-column w-50 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-dark-blue"
+        class="d-flex justify-content-center align-items-center flex-column w-50 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-dark-blue"
       >
-        <div
-          class="d-flex flex-mobile-row flex-tablet-column flex-laptop-column w-100"
+        <div class="w-100 bg-primary">
+          <h1 class="color-white px-2">Editar Perfil</h1>
+        </div>
+        <form
+          method="post"
+          class="d-flex flex-column w-75 align-items-center justify-content-center py-3"
+          onsubmit="update(event)"
         >
-          <img
-            src="https://avatars.cloudflare.steamstatic.com/7fab4ab782facae8c204f93371d90895c05f6c62_full.jpg"
-            alt="Foto do jogo"
-            class="w-mobile-50 w-tablet-100 w-laptop-100"
-          />
           <div
-            class="d-flex flex-column flex-mobile-column color-white w-50 w-mobile-50"
+            class="w-50 w-mobile-100 w-tablet-50 w-laptop-50 d-flex align-items-start justify-content-start flex-column py-1"
           >
-            <span class="fs-5 fw-600">Wson boy</span>
-            <div class="d-flex flex-mobile-row flex-tablet-row flex-laptop-row">
-              <p class="fs-3">Wilson Neto</p>
-            </div>
-            <p>Nada informado.</p>
+            <label class="color-white" for="nome">Nome</label>
+            <input
+              class="w-100 py-1 px-2 border-none"
+              id="name"
+              name="name"
+              required
+              type="text"
+            />
           </div>
-          <!-- <div
-            class="d-flex flex-mobile-column justify-content-start align-items-start d-mobile-none d-tablet-none d-laptop-none"
-          >
-            <a
-              class="border-rounded bg-white d-flex justify-content-center align-items-center fw-500 color-dark-blue"
-              >Editar Perfil</a
-            >
-          </div> -->
-        </div>
-        <div
-          class="d-flex justify-content-start align-items-start w-mobile-75 py-2"
-        >
-          <a
-            class="p-2 border-rounded bg-white d-flex justify-content-center align-items-center fw-500 color-dark-blue"
-            >Editar Perfil</a
-          >
-        </div>
-        <div class="d-flex flex-column p-2">
           <div
-            class="d-flex justify-content-start bg-blue align-items-start color-white"
+            class="w-50 w-mobile-100 w-tablet-50 w-laptop-50 d-flex align-items-start justify-content-start flex-column py-1"
           >
-            <span class="fs-4 color-white">Jogo favorito</span>
-          </div>
-          <div class="d-flex bg-white">
-            <img
-              src="../img/ragnarok.jpg"
-              alt="Foto do jogo"
-              class="max-inline-size-50"
+            <label class="color-white" for="email">Email</label>
+            <input
+              class="w-100 py-1 px-2 border-none"
+              id="email"
+              name="email"
+              required
+              type="email"
             />
-            <div
-              class="d-flex align-item-center justify-content-center flex-column p-2"
-            >
-              <span class="fw-600 fs-4">Nome do jogo</span>
-              <span class="fw-600 fs-3">Nota: 10</span>
-            </div>
           </div>
-        </div>
-        <div class="d-flex flex-column p-2">
-          <div class="d-flex bg-white">
-            <img
-              src="../img/gunbound.jpg"
-              alt="Foto do jogo"
-              class="max-inline-size-50"
-            />
-            <div
-              class="d-flex align-item-center justify-content-center flex-column p-2"
-            >
-              <span class="fw-600 fs-4">Nome do jogo</span>
-              <span class="fw-600 fs-3">Nota: 10</span>
-            </div>
+          <div
+            class="w-50 w-mobile-100 w-tablet-50 w-laptop-50 d-flex align-items-center justify-content-start flex-column py-2"
+          >
+            <button class="w-50 color-white bg-blue" type="submit">
+              Alterar
+            </button>
           </div>
-        </div>
-        <div class="d-flex flex-column p-2">
-          <div class="d-flex bg-white">
-            <img
-              src="../img/csgo2.png"
-              alt="Foto do jogo"
-              class="max-inline-size-50"
-            />
-            <div
-              class="d-flex align-item-center justify-content-center flex-column w-75 p-2"
-            >
-              <span class="fw-600 fs-4">Nome do jogo</span>
-              <span class="fw-600 fs-3">Nota: 10</span>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </main>
 
