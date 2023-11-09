@@ -31,7 +31,7 @@
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 10px; /* Adicione algum espaçamento entre os itens do menu */
+  padding: 0 1rem; /* Adicione algum espaçamento entre os itens do menu */
   text-align: center; /* Centralize o texto verticalmente */
   width: 100%; /* Ocupa toda a largura do menu */
   box-sizing: border-box; /* Garante que o padding não aumente a largura */
