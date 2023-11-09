@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .fw-600 {
   font-weight: 600;
 }

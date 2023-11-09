@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/register.css" />
     <title>Registro</title>
-    <link rel="shortcut icon" href="../img/logo.svg">
+    <link rel="shortcut icon" href="../img/logo.svg" />
     <script src="./register.js"></script>
     <script src="../util/validations.js"></script>
   </head>
@@ -31,17 +31,17 @@
           <input
             class="d-flex w-100 border-none text-input bg-secondary"
             type="email"
-            fs-3 d-block white-space-nowrap overflow-hidden lh-18="email"
+            name="email"
             id="email"
             placeholder="Digite seu email."
           />
 
-          <label class="fs-3 d-flex py-5px" for="fs-3 d-block white-space-nowrap overflow-hidden lh-18">Nome:</label>
+          <label class="fs-3 d-flex py-5px" for="name">Nome:</label>
           <input
             class="d-flex w-100 border-none text-input bg-secondary"
             type="text"
-            fs-3 d-block white-space-nowrap overflow-hidden lh-18="fs-3 d-block white-space-nowrap overflow-hidden lh-18"
-            id="fs-3 d-block white-space-nowrap overflow-hidden lh-18"
+            name="name"
+            id="name"
             placeholder="Digite seu nome."
           />
 
@@ -49,7 +49,7 @@
           <input
             class="d-flex w-100 border-none text-input bg-secondary"
             type="password"
-            fs-3 d-block white-space-nowrap overflow-hidden lh-18="password"
+            name="password"
             id="password"
             placeholder="Digite sua senha."
           />
@@ -60,7 +60,7 @@
           <input
             class="d-flex w-100 border-none text-input bg-secondary"
             type="password"
-            fs-3 d-block white-space-nowrap overflow-hidden lh-18="repeat-password"
+            name="repeat-password"
             id="repeat-password"
             placeholder="Repita sua senha."
           />
@@ -69,7 +69,6 @@
           >
             <button
               type="submit"
-              
               class="border-rounded p-2 fs-3 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
             >
               Registrar
@@ -77,7 +76,8 @@
           </div>
         </form>
         <p class="d-flex text-center flex-column">
-          Já tem uma conta? <a class="text-decoration-underline" href="login.html">Faça login.</a>
+          Já tem uma conta?
+          <a class="text-decoration-underline" href="login.html">Faça login.</a>
         </p>
       </div>
     </main>
