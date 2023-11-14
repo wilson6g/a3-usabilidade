@@ -1,0 +1,21 @@
+.visibility-hidden {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 599px) {
+  .visibility-mobile {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .visibility-tablet {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .visibility-laptop {
+    visibility: hidden;
+  }
+}

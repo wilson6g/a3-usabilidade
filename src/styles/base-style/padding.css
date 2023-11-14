@@ -1,13 +1,88 @@
 .p-0 {
   padding: 0;
 }
-.p1 {
-  padding: var(--space);
+
+.p-1 {
+  padding: calc(var(--space) * 0.25);
 }
-.p0-0625-t {
-  padding-top: calc(var(--space) * 0.652);
+
+.p-2 {
+  padding: 1rem;
 }
-.p1-025-t {
+
+.p-3 {
+  padding: calc(var(--space) * 0.75);
+}
+
+.px-1 {
+  padding: 0 calc(var(--space) * 0.25);
+}
+
+.px-2 {
+  padding: 0 calc(var(--space) * 0.5);
+}
+
+.px-3 {
+  padding: 0 calc(var(--space) * 0.75);
+}
+
+.py-1 {
+  padding: calc(var(--space) * 0.25) 0;
+}
+
+.py-2 {
+  padding: calc(var(--space) * 0.5) 0;
+}
+
+.py-3 {
+  padding: calc(var(--space) * 0.75) 0;
+}
+
+.py-4 {
+  padding: calc(var(--space) * 1) 0;
+}
+
+.pr-1 {
+  padding-right: calc(var(--space) * 0.25);
+}
+
+.pr-2 {
+  padding-right: calc(var(--space) * 0.5);
+}
+
+.pl-1 {
+  padding-left: calc(var(--space) * 0.25);
+}
+
+.pl-2 {
+  padding-left: calc(var(--space) * 0.5);
+}
+
+.pb-1 {
+  padding-bottom: calc(var(--space) * 0.25);
+}
+
+.pb-2 {
+  padding-bottom: calc(var(--space) * 0.5);
+}
+
+.pt-1 {
+  padding-top: calc(var(--space) * 0.25);
+}
+
+.pt-2 {
+  padding-top: calc(var(--space) * 0.5);
+}
+
+.p-unset {
+  padding: unset;
+}
+
+.py-5px {
+  padding: 5px 0;
+}
+
+.pt-125 {
   padding-top: calc(var(--space) * 1.25);
 }
 
@@ -18,14 +93,172 @@
   padding-left: calc(var(--space) * 1.25);
 }
 
-.p5-y {
-  padding: 5px 0;
-}
-
-.p1-y {
-  padding: 1rem;
-}
-
 .p1-025-r {
   padding-right: calc(var(--space) * 1.25);
+}
+
+.p-06-r {
+  padding-right: 0.6rem;
+}
+
+@media only screen and (max-width: 599px) {
+  .p-mobile-0 {
+    padding: 0;
+  }
+
+  .p-mobile-1 {
+    padding: var(--space * 0.25);
+  }
+
+  .p-mobile-2 {
+    padding: calc(var(--space) * 0.5);
+  }
+
+  .px-mobile-1 {
+    padding: 0 calc(var(--space) * 0.25);
+  }
+
+  .px-mobile-2 {
+    padding: 0 calc(var(--space) * 0.5);
+  }
+
+  .py-mobile-1 {
+    padding: calc(var(--space) * 0.25) 0;
+  }
+
+  .py-mobile-2 {
+    padding: calc(var(--space) * 0.5) 0;
+  }
+
+  .pr-mobile-1 {
+    padding-right: calc(var(--space) * 0.25);
+  }
+
+  .pr-mobile-2 {
+    padding-right: calc(var(--space) * 0.5);
+  }
+
+  .pl-mobile-1 {
+    padding-left: calc(var(--space) * 0.25);
+  }
+
+  .pl-mobile-2 {
+    padding-left: calc(var(--space) * 0.5);
+  }
+
+  .pb-mobile-1 {
+    padding-bottom: calc(var(--space) * 0.25);
+  }
+
+  .pb-mobile-2 {
+    padding-bottom: calc(var(--space) * 0.5);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .p-tablet-0 {
+    padding: 0;
+  }
+
+  .p-tablet-1 {
+    padding: var(--space * 0.25);
+  }
+
+  .p-tablet-2 {
+    padding: calc(var(--space) * 0.5);
+  }
+
+  .px-tablet-1 {
+    padding: 0 calc(var(--space) * 0.25);
+  }
+
+  .px-tablet-2 {
+    padding: 0 calc(var(--space) * 0.5);
+  }
+
+  .py-tablet-1 {
+    padding: calc(var(--space) * 0.25) 0;
+  }
+
+  .py-tablet-2 {
+    padding: calc(var(--space) * 0.5) 0;
+  }
+
+  .pr-tablet-1 {
+    padding-right: calc(var(--space) * 0.25);
+  }
+
+  .pr-tablet-2 {
+    padding-right: calc(var(--space) * 0.5);
+  }
+
+  .pl-tablet-1 {
+    padding-left: calc(var(--space) * 0.25);
+  }
+
+  .pl-tablet-2 {
+    padding-left: calc(var(--space) * 0.5);
+  }
+
+  .pb-tablet-1 {
+    padding-bottom: calc(var(--space) * 0.25);
+  }
+
+  .pb-tablet-2 {
+    padding-bottom: calc(var(--space) * 0.5);
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .p-laptop-0 {
+    padding: 0;
+  }
+
+  .p-laptop-1 {
+    padding: var(--space * 0.25);
+  }
+
+  .p-laptop-2 {
+    padding: alc(var(--space) * 0.5);
+  }
+
+  .px-laptop-1 {
+    padding: 0 calc(var(--space) * 0.25);
+  }
+
+  .px-laptop-2 {
+    padding: 0 calc(var(--space) * 0.5);
+  }
+
+  .py-laptop-1 {
+    padding: calc(var(--space) * 0.25) 0;
+  }
+
+  .py-laptop-2 {
+    padding: calc(var(--space) * 0.5) 0;
+  }
+
+  .pr-laptop-1 {
+    padding-right: calc(var(--space) * 0.25);
+  }
+
+  .pr-laptop-2 {
+    padding-right: calc(var(--space) * 0.5);
+  }
+
+  .pl-laptop-1 {
+    padding-left: calc(var(--space) * 0.25);
+  }
+
+  .pl-laptop-2 {
+    padding-left: calc(var(--space) * 0.5);
+  }
+
+  .pb-laptop-1 {
+    padding-bottom: calc(var(--space) * 0.25);
+  }
+
+  .pb-laptop-2 {
+    padding-bottom: calc(var(--space) * 0.5);
+  }
 }

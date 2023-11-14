@@ -10,8 +10,12 @@
   border-color: var(--color-tertiary);
 }
 
-.rounded {
+.border-rounded {
   border-radius: 10px;
+}
+
+.border-light {
+  border-radius: 3px;
 }
 
 .border-none {

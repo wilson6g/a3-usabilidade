@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/styles/login.css" />
+    <link rel="shortcut icon" href="../img/logo.svg" />
 
     <title>Login</title>
+    <script src="./login.js"></script>
+    <script src="../util/validations.js"></script>
+    <script src="./register.js"></script>
   </head>
 
   <body>
-    <main class="d-flex flex-s-column flex-lm-column vw-100 vh-100">
+    <main class="d-flex flex-mobile-column vw-100 vh-100">
       <div
-        class="d-flex align-items-center w-s-100 w-lm-100 h-lm-60 justify-content-center w-60 h-100 bg-primary"
+        class="d-flex align-items-center w-mobile-100 w-lm-100 h-lm-60 justify-content-center w-60 h-100 bg-primary"
       >
         <img
           class="w-60 h-60"
@@ -21,46 +25,36 @@
       </div>
 
       <div
-        class="d-flex align-items-center justify-content-center flex-column w-s-100 w-lm-100 w-40 h-100"
+        class="d-flex align-items-center justify-content-center flex-column w-mobile-100 w-lm-100 w-40 h-100"
       >
         <h1 class="text-center fw-600 fs-3">Login</h1>
-        <form method="post" class="w-60">
-          <label class="text-label d-flex p5-y" for="email"> Email </label>
+        <form method="post" class="w-60" onsubmit="login(event)">
+          <label class="fs-3 d-flex py-5px" for="email"> Email </label>
           <input
             type="email"
             name="email"
+            id="email"
+            required
             class="d-flex w-100 border-none text-input bg-secondary"
             placeholder="seuemail@exemplo.com"
           />
 
-          <label class="text-label d-flex p5-y" for="password"> Senha </label>
+          <label class="fs-3 d-flex py-5px" for="password"> Senha </label>
           <input
             type="password"
             name="password"
+            id="password"
+            required
             class="d-flex w-100 border-none text-input bg-secondary"
             placeholder="Senha"
           />
 
           <div
-            class="d-flex align-items-center justify-content-between fw-400 fs-1 container-remember w-s-100 w-lm-100 flex-s-column flex-lm-column"
+            class="d-flex w-100 align-items-center justify-content-center m1-025-t"
           >
-            <label class="d-flex" for="remember">
-              <input
-                type="checkbox"
-                name="remember"
-                class="d-flex w-100 border-none text-input bg-secondary"
-              />
-              Lembrar
-            </label>
-            <a href="#" class="text-underline">
-              Esqueceu a senha?
-            </a>
-          </div>
-
-          <div class="d-flex w-100 align-items-center justify-content-center">
             <button
               type="submit"
-              class="rounded p1 fs-1 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
+              class="border-rounded p-2 fs-3 d-flex color-secondary align-items-center justify-content-center bg-primary w-50"
             >
               Entrar
             </button>
@@ -68,7 +62,7 @@
 
           <p class="d-flex text-center flex-column">
             Não tem uma conta?
-            <a class="text-underline" href="#"> Cadastre-se </a>
+            <a class="text-decoration-underline" href="register.html"> Cadastre-se </a>
           </p>
         </form>
       </div>
