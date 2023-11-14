@@ -7,7 +7,7 @@
 }
 
 .m-2 {
-  margin: alc(var(--space) * 0.5);
+  margin: calc(var(--space) * 0.5);
 }
 
 .mx-1 {
@@ -83,8 +83,6 @@
 .m1-0875-t {
   margin-top: calc(var(--space) * 1.875);
 }
-
-
 
 .mb-25px {
   margin-bottom: 25px;

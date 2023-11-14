@@ -142,11 +142,28 @@
             />
           </div>
           <div
-            class="w-50 w-mobile-100 w-tablet-50 w-laptop-50 d-flex align-items-center justify-content-start flex-column py-2"
+            class="py-3 d-flex w-40 w-mobile-100 w-tablet-100 w-laptop-100 align-items-center justify-content-center flex-mobile-column flex-tablet-column flex-laptop-column"
           >
-            <button class="w-50 color-white bg-blue" type="submit">
-              Alterar
-            </button>
+            <div class="w-50 w-mobile-100 w-tablet-50 w-laptop-50">
+              <button
+                class="bg-primary color-white border-none border-light p-2 w-100 w-mobile-100 w-tablet-100 w-laptop-100"
+                type="submit"
+              >
+                Editar
+              </button>
+            </div>
+            <div
+              class="w-50 w-mobile-100 w-tablet-50 w-laptop-50 py-mobile-2 py-tablet-2 py-laptop-2"
+            >
+              <button
+                type="button"
+                onclick="backPage()"
+                id="cancel"
+                class="bg-red color-white border-none border-light mobile-margin-0 tablet-margin-0 laptop-margin-0 ml-2 p-2 w-100 w-mobile-100 w-tablet-100 w-laptop-100"
+              >
+                Cancelar
+              </button>
+            </div>
           </div>
         </form>
       </div>

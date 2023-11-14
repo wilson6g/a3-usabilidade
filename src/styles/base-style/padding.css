@@ -111,7 +111,7 @@
   }
 
   .p-mobile-2 {
-    padding: alc(var(--space) * 0.5);
+    padding: calc(var(--space) * 0.5);
   }
 
   .px-mobile-1 {
@@ -165,7 +165,7 @@
   }
 
   .p-tablet-2 {
-    padding: alc(var(--space) * 0.5);
+    padding: calc(var(--space) * 0.5);
   }
 
   .px-tablet-1 {

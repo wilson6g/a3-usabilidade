@@ -1,19 +1,16 @@
-const users = [
+const platforms = [
   {
-    name: "admin",
-    email: "admin@gmail.com",
-  },
-  {
-    name: "mod",
-    email: "mod@gmail.com",
+    name: "Steam",
+    description:
+      "Steam é um software de gestão de direitos digitais criado pela Valve Corporation ou Valve L.L.C., de plataformas digitais como jogos e aplicativos de programação e fornece serviços facilitados como atualização automática de jogos, e preços acessíveis aos usuários.",
   },
 ];
 
 const validateFields = () => {
-  const email = document.getElementById("email").value;
   const name = document.getElementById("name").value;
+  const description = document.getElementById("description").value;
 
-  if (!email || !name) {
+  if (!description || !name) {
     alert("Todos os campos são obrigatórios");
     return false;
   }
@@ -22,8 +19,12 @@ const validateFields = () => {
 };
 
 const cleanFields = () => {
-  document.getElementById("email").value = "";
   document.getElementById("name").value = "";
+  document.getElementById("description").value = "";
+};
+
+const isDuplicatePlatform = (inputPlatform) => {
+  return !!platforms.find((platform) => platform.name === inputPlatform.name);
 };
 
 const backPage = () => {
@@ -32,35 +33,29 @@ const backPage = () => {
   };
 };
 
-const isDuplicateUser = (inputUser) => {
-  return !!users.find(
-    (user) => user.email === inputUser.email || user.name === inputUser.name
-  );
-};
-
 const update = (event) => {
   event.preventDefault();
 
-  const email = document.getElementById("email").value;
   const name = document.getElementById("name").value;
+  const description = document.getElementById("description").value;
   const isValidFields = validateFields();
 
   if (!isValidFields) {
     return;
   }
 
-  const user = {
-    email,
+  const platform = {
     name,
+    description,
   };
 
-  const isDuplicatedUser = isDuplicateUser(user);
+  const isDuplicatedPlatform = isDuplicatePlatform(platform);
 
-  if (isDuplicatedUser) {
-    users.push(user);
-    window.location.href = "/src/pages/profile.html";
+  if (!isDuplicatedPlatform) {
+    platforms.push(platform);
+    window.location.href = "/src/pages/platform-management.html";
   } else {
-    alert("Usuário não existe na base de dados!");
+    alert("A plataforma já existe na base de dados!");
     cleanFields();
     return;
   }

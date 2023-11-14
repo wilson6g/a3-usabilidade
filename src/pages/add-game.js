@@ -36,7 +36,7 @@ const backPage = () => {
   };
 };
 
-const update = (event) => {
+const create = (event) => {
   event.preventDefault();
 
   const name = document.getElementById("name").value;

@@ -18,6 +18,7 @@
   position: fixed; /* Mantém o menu fixo na tela */
   top: 0;
   left: 0;
+  z-index: 1000;
 }
 
 .menu ul {

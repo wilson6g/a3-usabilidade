@@ -26,7 +26,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
           </label>
-                    <nav class="menu d-flex w-100 h-100 flex-column">
+          <nav class="menu d-flex w-100 h-100 flex-column">
             <ul>
               <li>
                 <a
@@ -115,24 +115,25 @@
         <form
           method="post"
           class="d-flex flex-column w-75 align-items-center justify-content-center py-3"
+          onsubmit="create(event)"
         >
-          <label class="color-white d-flex py-5px" for="game">
+          <label class="color-white d-flex py-5px" for="name">
             Plataforma
           </label>
           <input
             class="w-60 border-none bg-white p-1 w-mobile-100 w-tablet-100 w-laptop-100"
-            name="plataforma"
-            id="plataforma"
+            name="name"
+            id="name"
             placeholder="Nome da Plataforma"
           />
 
-          <label class="color-white d-flex py-5px" for="descricao">
+          <label class="color-white d-flex py-5px" for="description">
             Descrição
           </label>
           <textarea
-            id="descricao"
+            id="description"
             class="w-60 border-none bg-white p-1 w-mobile-100 w-tablet-100 w-laptop-100"
-            name="descricao"
+            name="description"
             rows="4"
             cols="50"
             placeholder="Descrição"
@@ -146,11 +147,12 @@
                 class="bg-primary color-white border-none border-light p-2 w-100 w-mobile-100 w-tablet-100 w-laptop-100"
                 type="submit"
               >
-                Editar
+                Adicionar
               </button>
             </div>
             <div class="w-100">
               <button
+                type="button"
                 onclick="backPage()"
                 id="cancel"
                 class="bg-red color-white border-none border-light ml-2 p-2 w-100 w-mobile-100 w-tablet-100 w-laptop-100"

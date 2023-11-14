@@ -32,6 +32,12 @@ const isDuplicateUser = (inputUser) => {
   );
 };
 
+const backPage = () => {
+  document.getElementById("cancel").onclick = function () {
+    window.history.back();
+  };
+};
+
 const update = (event) => {
   event.preventDefault();
 

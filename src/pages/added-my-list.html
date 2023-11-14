@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../styles/added-my-list.css" />
     <title>Dominus</title>
     <script src="./menu-open.js"></script>
+    <script src="./added-my-list.js"></script>
     <link rel="shortcut icon" href="../img/logo.svg" />
   </head>
 
@@ -106,14 +107,18 @@
       class="d-flex justify-content-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1 h-50"
     >
       <div
-        class="d-flex flex-column align-item-center min-height-60 justify-content-center w-30 h-100 bg-blue border-light w-mobile-100 w-tablet-100 w-laptop-100"
+        class="d-flex flex-column align-item-center min-height-60 justify-content-center w-30 h-100 bg-dark-blue border-light w-mobile-100 w-tablet-100 w-laptop-100"
       >
-        <span
-          class="color-white fw-600 p-2-b px-2 text-uppercase fw-600 fs-3 align-self-start align-self-center"
-          >Adicionar a minha lista de jogos</span
-        >
+        <div class="w-100 bg-blue py-2">
+          <span
+            class="color-white fw-600 p-2-b px-2 text-uppercase fw-600 fs-3 align-self-start align-self-center"
+            >Adicionar a minha lista de jogos</span
+          >
+        </div>
         <form
+          method="post"
           class="p-3 min-height-60 d-flex flex-column justify-content-center align-item-center"
+          onsubmit="create(event)"
         >
           <label class="color-white d-flex py-5px" for="game"> Jogo </label>
           <select
@@ -121,7 +126,7 @@
             name="game"
             id="game"
           >
-            <option selected>Selecione um jogo</option>
+            <option>Selecione um jogo</option>
             <option value="id-ragnarok">Ragnarok</option>
             <option value="id-gunbound">Gunbound</option>
             <option value="id-muaway">Muaway</option>
@@ -133,7 +138,7 @@
             name="grade"
             id="grade"
           >
-            <option selected>Atribua uma nota</option>
+            <option>Atribua uma nota</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -149,68 +154,84 @@
             id="category"
             multiple
           >
-            <option value="id-categoria" selected>Jogado</option>
+            <option value="id-categoria">Jogado</option>
             <option value="id-categoria">Jogando</option>
             <option value="id-categoria">Zerado</option>
             <option value="id-categoria">Não recomendo</option>
             <option value="id-categoria">Outros status</option>
           </select>
-          <div class="py-3">
-            <button
-              class="bg-white border-none border-light p-2 w-25 w-mobile-100 w-tablet-100 w-laptop-100"
-              type="submit"
+          <div
+            class="py-3 d-flex w-40 w-mobile-100 w-tablet-100 w-laptop-100 align-items-center justify-content-center flex-mobile-column flex-tablet-column flex-laptop-column"
+          >
+            <div class="w-100 w-mobile-100 w-tablet-100 w-laptop-100">
+              <button
+                class="bg-primary color-white border-none border-light p-2 w-100 w-mobile-100 w-tablet-100 w-laptop-100"
+                type="submit"
+              >
+                Adicionar Jogo
+              </button>
+            </div>
+            <div
+              class="w-50 w-mobile-100 w-tablet-100 w-laptop-100 py-mobile-2 py-tablet-2 py-laptop-2"
             >
-              Cadastrar
-            </button>
+              <button
+                type="button"
+                onclick="backPage()"
+                id="cancel"
+                class="bg-red color-white border-none border-light mobile-margin-0 tablet-margin-0 laptop-margin-0 ml-2 p-2 w-100 w-mobile-100 w-tablet-100 w-laptop-100"
+              >
+                Cancelar
+              </button>
+            </div>
           </div>
         </form>
       </div>
     </main>
 
     <footer
-    class="d-flex flex-column m1-0625-t align-items-center justify-content-center align-mobile-items-center justify-mobile-content-between bg-primary w-100 h-100"
-  >
-    <div
-      class="d-flex d-mobile-none flex-row align-items-start justify-content-center w-75"
+      class="d-flex flex-column m1-0625-t align-items-center justify-content-center align-mobile-items-center justify-mobile-content-between bg-primary w-100 h-100"
     >
-      <div class="w-100 py-2">
-        <span class="color-secondary">Desenvolvimento de Habilidades:</span>
-        <p class="color-secondary">
-          Os jogos podem melhorar a resolução de problemas, o pensamento
-          estratégico e a tomada de decisões rápida.
-        </p>
+      <div
+        class="d-flex d-mobile-none flex-row align-items-start justify-content-center w-75"
+      >
+        <div class="w-100 py-2">
+          <span class="color-secondary">Desenvolvimento de Habilidades:</span>
+          <p class="color-secondary">
+            Os jogos podem melhorar a resolução de problemas, o pensamento
+            estratégico e a tomada de decisões rápida.
+          </p>
+        </div>
+        <div class="w-100 py-2">
+          <span class="color-secondary">Entretenimento Social:</span>
+          <p class="color-secondary">
+            Muitos jogos oferecem modos multiplayer que permitem que os
+            jogadores se conectem com amigos e pessoas de todo o mundo.
+          </p>
+        </div>
+        <div class="w-100 py-2">
+          <span class="color-secondary">Alívio do Estresse e Diversão:</span>
+          <p class="color-secondary">
+            Em um mundo agitado, os jogos podem ser uma maneira relaxante de
+            aliviar o estresse.
+          </p>
+        </div>
       </div>
-      <div class="w-100 py-2">
-        <span class="color-secondary">Entretenimento Social:</span>
-        <p class="color-secondary">
-          Muitos jogos oferecem modos multiplayer que permitem que os
-          jogadores se conectem com amigos e pessoas de todo o mundo.
-        </p>
+      <hr
+        class="bc-secondary w-mobile-90 d-mobile-none"
+        size="2"
+        width="75%"
+        noshade="2"
+      />
+      <div
+        class="d-flex flex-row align-items-center justify-content-between w-75 w-mobile-90"
+      >
+        <div class="w-mobile-90">
+          <a href="/src/pages/home.html">
+            <img class="logo" src="/src/img/logo.svg" alt="Nossa Logo" />
+          </a>
+        </div>
+        <p class="fs-3-5 color-secondary">Encontre, Jogue, Viva</p>
       </div>
-      <div class="w-100 py-2">
-        <span class="color-secondary">Alívio do Estresse e Diversão:</span>
-        <p class="color-secondary">
-          Em um mundo agitado, os jogos podem ser uma maneira relaxante de
-          aliviar o estresse.
-        </p>
-      </div>
-    </div>
-    <hr
-      class="bc-secondary w-mobile-90 d-mobile-none"
-      size="2"
-      width="75%"
-      noshade="2"
-    />
-    <div
-      class="d-flex flex-row align-items-center justify-content-between w-75 w-mobile-90"
-    >
-      <div class="w-mobile-90">
-        <a href="/src/pages/home.html">
-          <img class="logo" src="/src/img/logo.svg" alt="Nossa Logo" />
-        </a>
-      </div>
-      <p class="fs-3-5 color-secondary">Encontre, Jogue, Viva</p>
-    </div>
-  </footer>
+    </footer>
   </body>
 </html>
