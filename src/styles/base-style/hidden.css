@@ -1,26 +1,22 @@
 @media only screen and (max-width: 599px) {
-  /* Mobile S, LM */
   .d-mobile-none  {
     display: none;
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 2559px) {
-  /* TODO */
   .hidden {
     display: none;
   }
 }
 
 @media only screen and (min-width: 2560px) {
-  /* TODO */
   .hidden {
     display: none;
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  /* TODO */
   .hidden-laptop {
     display: none;
   }

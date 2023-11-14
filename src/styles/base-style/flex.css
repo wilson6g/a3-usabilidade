@@ -67,8 +67,6 @@
 }
 
 @media only screen and (max-width: 599px) {
-  /* Mobile S, LM */
-
   .flex-mobile-column {
     flex-direction: column;
   }

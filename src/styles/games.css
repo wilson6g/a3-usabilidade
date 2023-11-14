@@ -13,24 +13,24 @@
 
 @media only screen and (max-width: 599px) {
   .avatar {
-    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    width: 30px; 
     height: 30px;
-    margin-right: 4px; /* Ajuste o espaçamento */
+    margin-right: 4px;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
   .avatar {
-    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    width: 30px; 
     height: 30px;
-    margin-right: 4px; /* Ajuste o espaçamento */
+    margin-right: 4px;
   }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
   .avatar {
-    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    width: 30px; 
     height: 30px;
-    margin-right: 4px; /* Ajuste o espaçamento */
+    margin-right: 4px;
   }
 }

@@ -125,7 +125,6 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1023px) {
-  /* TODO */
 
   .w-tablet-10 {
     width: 10%;
@@ -189,8 +188,6 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1439px) {
-  /* TODO */
-
   .w-laptop-10 {
     width: 10%;
   }

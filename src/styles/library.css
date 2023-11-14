@@ -42,16 +42,16 @@
   }
 
   .avatar {
-    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    width: 30px;
     height: 30px;
-    margin-right: 4px; /* Ajuste o espaçamento */
+    margin-right: 4px;
   }
 
   .mobile-image {
-    width: 100%; /* Ajuste a largura para preencher a largura da tela */
-    max-width: none; /* Remova o máximo de largura */
-    max-height: none; /* Remova o máximo de altura */
-    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    overflow: auto;
   }
 }
 
@@ -70,16 +70,16 @@
   }
 
   .avatar {
-    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    width: 30px;
     height: 30px;
-    margin-right: 4px; /* Ajuste o espaçamento */
+    margin-right: 4px;
   }
 
   .mobile-image {
-    width: 100%; /* Ajuste a largura para preencher a largura da tela */
-    max-width: none; /* Remova o máximo de largura */
-    max-height: none; /* Remova o máximo de altura */
-    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    overflow: auto;
   }
 }
 
@@ -98,15 +98,15 @@
   }
 
   .avatar {
-    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    width: 30px;
     height: 30px;
-    margin-right: 4px; /* Ajuste o espaçamento */
+    margin-right: 4px;
   }
 
   .mobile-image {
-    width: 100%; /* Ajuste a largura para preencher a largura da tela */
-    max-width: none; /* Remova o máximo de largura */
-    max-height: none; /* Remova o máximo de altura */
-    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    overflow: auto;
   }
 }
