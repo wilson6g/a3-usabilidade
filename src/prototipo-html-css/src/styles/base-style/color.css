@@ -1,0 +1,28 @@
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.color-tertiary {
+  color: var(--color-tertiary);
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-black {
+  color: var(--color-black);
+}
+
+.color-gray {
+  color: var(--color-gray);
+}
+
+.color-dark-blue {
+  color: #091742;
+}
+

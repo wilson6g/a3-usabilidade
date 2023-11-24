@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url(./base-style/background-color.css);
+@import url(./base-style/border.css);
+@import url(./base-style/color.css);
+@import url(./base-style/display.css);
+@import url(./base-style/flex.css);
+@import url(./base-style/height.css);
+@import url(./base-style/hidden.css);
+@import url(./base-style/line-height.css);
+@import url(./base-style/margin.css);
+@import url(./base-style/overflow.css);
+@import url(./base-style/padding.css);
+@import url(./base-style/position.css);
+@import url(./base-style/text.css);
+@import url(./base-style/visibility.css);
+@import url(./base-style/width.css);
+@import url(./base-style/white-space.css);
+@import url(./base-style/image.css);
+@import url(./menu.css);
+
+:root {
+  --color-primary: #1f7dd6;
+  --color-secondary: #f7f6fc;
+  --color-tertiary: #3eecfc;
+  --color-black: #000;
+  --color-gray: #7f97a5;
+  --min-screen-mobile: 320px;
+  --min-screen-tablet: 481px;
+  --min-screen-laptop: 769px;
+  --min-screen-desktop: 1025px;
+  --min-screen-desktop-xl: 1201px;
+  --max-screen-mobile: 480px;
+  --max-screen-tablet: 768px;
+  --max-screen-laptop: 1024px;
+  --max-screen-desktop: 1200px;
+  --space: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+

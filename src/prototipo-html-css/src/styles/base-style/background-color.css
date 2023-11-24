@@ -1,0 +1,24 @@
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-dark-blue {
+  background-color: #091742;
+}
+
+.bg-blue {
+  background-color: #1f7dd6;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+
+.bg-red {
+  background-color: #ff0000;
+}

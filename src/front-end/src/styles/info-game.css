@@ -1,0 +1,41 @@
+@import url(/src/styles/global.css);
+
+.button {
+  padding: 0.6rem;
+  background-color: #FFF;
+  color: var(--color-primary);
+  border-radius: 3px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  height: 100%;
+}
+
+.rounded {
+  border-radius: 2px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  /* padding: 0; */
+}
+
+
+@media only screen and (max-width: 599px) {
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+
+}
