@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import { Footer } from "../../shared/components/Footer";
 import { Header } from "../../shared/components/Header";
 import { createPlatform } from "../../shared/services/platforms-service/platform-service";
-import "../../styles/edit-profile.css";
+import "../../styles/edit-platform.css";
 
 export function AddPlatform() {
   const initialValues = {
@@ -29,7 +29,7 @@ export function AddPlatform() {
     <>
       <Header />
 
-      <main className="d-flex justify-content-center align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
+      <main className="d-flex min-h-100 justify-content-center align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
         <div className="d-flex justify-content-center align-items-center flex-column w-50 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-dark-blue">
           <div className="w-100 bg-primary">
             <h1 className="color-white px-2">Cadastrar Plataforma</h1>

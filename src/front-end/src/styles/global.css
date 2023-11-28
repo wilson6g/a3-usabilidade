@@ -63,3 +63,11 @@ button {
   border: none;
 }
 
+table {
+  width: 100%;
+}
+
+td, th {
+  word-wrap: break-word; /* Quebra de palavras */
+  max-width: 200px; /* Largura máxima das células */
+}

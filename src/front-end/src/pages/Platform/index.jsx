@@ -48,7 +48,7 @@ export function Platform() {
     <>
       <Header />
 
-      <main className="d-flex justify-content-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
+      <main className="d-flex min-h-100 justify-content-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
         <div className="d-flex flex-column align-items-center w-100 h-100 w-mobile-100 w-tablet-100 w-laptop-100">
           <nav className="bg-primary d-flex align-mobile-items-center align-tablet-items-center align-laptop-items-center w-75 w-tablet-100 w-laptop-100 w-mobile-100 flex-mobile-column flex-tablet-column flex-laptop-column">
             <ul className="d-flex align-items-center d-mobile-block d-tablet-block d-laptop-block w-mobile-90 w-tablet-90 w-laptop-90 p-06-r flex-mobile-column flex-tablet-column flex-laptop-column p-0 w-100">

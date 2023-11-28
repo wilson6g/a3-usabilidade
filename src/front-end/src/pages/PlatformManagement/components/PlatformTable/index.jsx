@@ -37,7 +37,7 @@ export function PlatformTable(props) {
         {props.rows.map((item, rowIndex) => (
           <tr key={rowIndex}>
             <td className="text-center">{item.nome}</td>
-            <td className="text-justify">{item.descricao}</td>
+            <td className="text-justify text-overflow-ellipses">{item.descricao}</td>
             <td className="text-center">
               <a className="color-black" href={`./edit-platform?id=${item.id}`}>
                 <span className="material-symbols-outlined">edit</span>

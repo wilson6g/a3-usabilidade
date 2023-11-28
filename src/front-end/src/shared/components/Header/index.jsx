@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import LogoHeader from "../../img/logo.svg";
+import { Menu } from "../Menu";
 
 export function Header() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export function Header() {
   return (
     <header className="mb-25px mb-25px d-flex align-items-center justify-content-center bg-primary w-mobile-100 w-tablet-100 w-laptop-100 w-100">
       <div className="d-flex w-mobile-100 w-tablet-100 w-laptop-100 align-items-center align-items-center align-items-center align-items-center">
-        <div className="hidden d-flex align-items-center align-items-center align-items-center w-mobile-10 w-tablet-10 w-laptop-10 justify-content-center">
+        {/* <div className="hidden d-flex align-items-center align-items-center align-items-center w-mobile-10 w-tablet-10 w-laptop-10 justify-content-center">
           <input type="checkbox" id="menu-toggle" className="hidden" />
           <label htmlFor="menu-toggle" className="cursor-pointer">
             <div className="bar"></div>
@@ -57,7 +58,9 @@ export function Header() {
               </li>
             </ul>
           </nav>
-        </div>
+        </div> */}
+        <Menu />
+
 
         <div className="w-mobile-90 w-tablet-90 w-laptop-90 d-flex justify-content-center align-items-center align-self-center">
           <a href="library">

@@ -11,6 +11,7 @@ import {
   updateGameById,
 } from "../../shared/services/game-service/game-service";
 import { findAllPlatforms } from "../../shared/services/platforms-service/platform-service";
+import "../../styles/edit-game.css";
 
 export function EditGame() {
   let query = useQuery();

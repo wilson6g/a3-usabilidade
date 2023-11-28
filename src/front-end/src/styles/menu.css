@@ -1,45 +1,55 @@
+@import url(/src/styles/global.css);
+
+.menu-icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 5px;
+}
+
 .bar {
   width: 25px;
   height: 3px;
   background-color: #fff;
-  margin: 5px auto;
   transition: 0.4s;
-}
-
-#menu-toggle {
-  display: none;
 }
 
 .menu {
   display: none;
   background-color: #333;
-  max-height: 100%; /* Defina a altura máxima para 100% */
-  width: 90%; /* Ocupa toda a largura da tela */
-  position: fixed; /* Mantém o menu fixo na tela */
+  width: 80%;
+  max-width: 600px;
+  height: 100vh;
+  max-height: 100%;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(0);
 }
 
 .menu ul {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Torna a lista vertical */
+  flex-direction: column;
 }
 
 .menu ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
-  padding: 0 1rem; /* Adicione algum espaçamento entre os itens do menu */
-  text-align: center; /* Centralize o texto verticalmente */
-  width: 100%; /* Ocupa toda a largura do menu */
-  box-sizing: border-box; /* Garante que o padding não aumente a largura */
-}
-
-#menu-toggle:checked + .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
+  padding: 0 1rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
