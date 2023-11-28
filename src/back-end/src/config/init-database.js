@@ -2,6 +2,8 @@ const database = require("./database");
 const env = require("../config/env-database-config");
 const mysql = require("mysql2/promise");
 
+console.log(env);
+
 async function executeSQL(sql) {
   try {
     const rows = await database.query(sql);
@@ -41,30 +43,24 @@ async function createDatabase() {
   }
 }
 
-async function createDatabase(databaseName) {
-  const sqlScript = `CREATE DATABASE ${databaseName}`;
-
-  await executeSQL(sqlScript);
-}
-
 async function createTables(databaseName) {
   const sqlScripts = [
-    `CREATE TABLE ${databaseName}.usuario (
+    `CREATE TABLE ${env.database}.usuario (
       usuario VARCHAR(12) UNIQUE,
       nome VARCHAR(36) NOT NULL,
       email VARCHAR(120) UNIQUE PRIMARY KEY,
       senha VARCHAR(120) NOT NULL
     )`,
-    `CREATE TABLE ${databaseName}.plataforma (
+    `CREATE TABLE ${env.database}.plataforma (
       id VARCHAR(36) PRIMARY KEY,
       nome VARCHAR(32) NOT NULL,
       descricao TEXT
     )`,
-    `CREATE TABLE ${databaseName}.categoria (
+    `CREATE TABLE ${env.database}.categoria (
       id VARCHAR(36) PRIMARY KEY,
       nome VARCHAR(32) NOT NULL
     )`,
-    `CREATE TABLE ${databaseName}.jogo (
+    `CREATE TABLE ${env.database}.jogo (
       id VARCHAR(36) PRIMARY KEY,
       nome VARCHAR(120) NOT NULL,
       descricao TEXT,
@@ -74,7 +70,7 @@ async function createTables(databaseName) {
       FOREIGN KEY (fk_usuario) REFERENCES usuario(email),
       FOREIGN KEY (fk_plataforma) REFERENCES plataforma(id)
     )`,
-    `CREATE TABLE ${databaseName}.jogo_categoria (
+    `CREATE TABLE ${env.database}.jogo_categoria (
       id VARCHAR(36) PRIMARY KEY,
       fk_jogo VARCHAR(36) NOT NULL,
       fk_categoria VARCHAR(36) NOT NULL,
