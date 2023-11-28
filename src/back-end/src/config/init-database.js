@@ -1,8 +1,10 @@
 const database = require("./database");
+const env = require("../config/env-database-config");
+const mysql = require("mysql2/promise");
 
 async function executeSQL(sql) {
   try {
-    const [rows, fields] = await database.query(sql);
+    const rows = await database.query(sql);
 
     console.log("Script SQL executado com sucesso.");
 
@@ -10,6 +12,32 @@ async function executeSQL(sql) {
   } catch (error) {
     console.error("Erro ao executar script SQL:", error);
     throw error;
+  }
+}
+
+async function createDatabase() {
+  const poolWithoutDB = mysql.createPool({
+    connectionLimit: 10,
+    host: env.host,
+    user: env.user,
+    password: env.password,
+  });
+
+  try {
+    // Create a connection without specifying a database
+    const connection = await poolWithoutDB.getConnection();
+
+    // Create the database
+    await connection.query(
+      `CREATE DATABASE IF NOT EXISTS \`${env.database}\`;`
+    );
+
+    // Release the connection
+    connection.release();
+
+    console.log(`Database '${env.database}' created successfully.`);
+  } catch (error) {
+    console.error("Error creating database:", error);
   }
 }
 
@@ -55,17 +83,10 @@ async function createTables(databaseName) {
     )`,
   ];
 
-  const promises = sqlScripts.map(async (script) => {
-    try {
-      await executeSQL(script);
-    } catch (error) {
-      console.error(`Erro ao executar script SQL: ${error}`);
-      throw error;
-    }
-  });
-
   try {
-    await Promise.all(promises);
+    for (const script of sqlScripts) {
+      await executeSQL(script);
+    }
     console.log("Todas as tabelas foram criadas com sucesso.");
   } catch (error) {
     console.error("Erro ao criar tabelas:", error);

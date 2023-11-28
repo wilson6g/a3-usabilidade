@@ -7,6 +7,7 @@ const pool = mysql.createPool({
   user: env.user,
   password: env.password,
   database: env.database,
+  port: env.database_port,
 });
 
 async function query(sql, values) {
@@ -20,4 +21,3 @@ async function query(sql, values) {
 }
 
 module.exports = { query };
-// module.exports = createConnection;

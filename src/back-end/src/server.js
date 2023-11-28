@@ -11,10 +11,11 @@ const cors = require("cors");
 require("dotenv").config();
 
 (async () => {
-  // await createDatabase('dominus_pro1');
-  // await createTables('dominus_pro1');
+  if (env.synchronize === true) {
+    await createDatabase();
+    await createTables();
+  }
 })();
-
 const server = express();
 
 server.use(express.json());
