@@ -1,0 +1,27 @@
+.bc-primary {
+  border-color: var(--color-primary);
+}
+
+.bc-secondary {
+  border-color: var(--color-secondary);
+}
+
+.bc-tertiary {
+  border-color: var(--color-tertiary);
+}
+
+.border-rounded {
+  border-radius: 10px;
+}
+
+.border-light {
+  border-radius: 3px;
+}
+
+.border-solid {
+  border: 2px solid #000;
+}
+
+.border-none {
+  border: none;
+}

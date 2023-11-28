@@ -1,0 +1,36 @@
+@import url(/src/styles/global.css);
+
+.h-24 {
+  height: 24px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  vertical-align: text-bottom;
+  margin-right: 6px;
+}
+
+@media only screen and (max-width: 599px) {
+  .avatar {
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .avatar {
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .avatar {
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
+  }
+}

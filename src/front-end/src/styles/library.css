@@ -1,0 +1,112 @@
+@import url(/src/styles/global.css);
+
+.search {
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  vertical-align: text-bottom;
+  margin-right: 6px;
+}
+
+.mobile-image {
+  width: 920px;
+  max-width: 960px;
+  max-height: 960px;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 599px) {
+  .search {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
+  }
+
+  .mobile-image {
+    width: 100%; /* Ajuste a largura para preencher a largura da tela */
+    max-width: none; /* Remova o máximo de largura */
+    max-height: none; /* Remova o máximo de altura */
+    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .search {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
+  }
+
+  .mobile-image {
+    width: 100%; /* Ajuste a largura para preencher a largura da tela */
+    max-width: none; /* Remova o máximo de largura */
+    max-height: none; /* Remova o máximo de altura */
+    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .search {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 30px; /* Ajuste o tamanho da imagem para telas menores */
+    height: 30px;
+    margin-right: 4px; /* Ajuste o espaçamento */
+  }
+
+  .mobile-image {
+    width: 100%; /* Ajuste a largura para preencher a largura da tela */
+    max-width: none; /* Remova o máximo de largura */
+    max-height: none; /* Remova o máximo de altura */
+    overflow: auto; /* Adapte o overflow às imagens menores, permitindo rolagem se necessário */
+  }
+}
