@@ -2,8 +2,6 @@ const database = require("./database");
 const env = require("../config/env-database-config");
 const mysql = require("mysql2/promise");
 
-console.log(env);
-
 async function executeSQL(sql) {
   try {
     const rows = await database.query(sql);
