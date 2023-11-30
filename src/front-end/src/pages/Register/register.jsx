@@ -41,6 +41,21 @@ export function Register() {
           onSubmit={handleSubmit}
         >
           <label className="fs-3 d-flex py-5px" htmlFor="email">
+            Usuário:
+          </label>
+          <input
+            className="d-flex w-100 border-none text-input bg-secondary"
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Digite um usuário"
+            value={values.usuario}
+            onChange={(event) =>
+              setValues({ ...values, usuario: event.target.value })
+            }
+          />
+
+          <label className="fs-3 d-flex py-5px" htmlFor="email">
             E-mail:
           </label>
           <input
