@@ -1,12 +1,16 @@
 const express = require("express");
-const createDatabase = require("./config/init-database").createDatabase;
-const createTables = require("./config/init-database").createTables;
 const env = require("./config/env-database-config");
 const usuarioRoutes = require("./routes/usuario-router");
 const categoriaRoutes = require("./routes/categoria-router");
 const plataformaRoutes = require("./routes/plataforma-router");
 const jogoRoutes = require("./routes/jogo-router");
 const cors = require("cors");
+const {
+  createDatabase,
+  createTables,
+  createUsers,
+  initDatabaseData
+} = require("./config/init-database");
 
 require("dotenv").config();
 
@@ -14,6 +18,7 @@ require("dotenv").config();
   if (env.synchronize === true) {
     await createDatabase();
     await createTables();
+    await initDatabaseData();
   }
 })();
 const server = express();

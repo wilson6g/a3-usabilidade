@@ -31,7 +31,6 @@ async function loginUsuarioUseCase(input) {
 
     return gerarTokenJwt(usuarioExistente.email, 86400);
   } catch (error) {
-    console.error(error);
     const statusCode = error.statusCode || 500;
     throw {
       message: `Erro ao fazer login: ${error.message}`,

@@ -7,7 +7,6 @@ async function criarJogoCategoriaRepository({ id, fk_jogo, fk_categoria }) {
       [id, fk_jogo, fk_categoria]
     );
   } catch (error) {
-    console.error(error);
     throw error;
   }
 }

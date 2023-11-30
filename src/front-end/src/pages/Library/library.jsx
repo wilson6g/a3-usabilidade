@@ -35,7 +35,7 @@ export function Library() {
     <>
       <Header />
 
-      <main className="d-flex justify-content-center pt-2 flex-mobile-column flex-tablet-column flex-laptop-column">
+      <main className="min-h-100 d-flex justify-content-center pt-2 flex-mobile-column flex-tablet-column flex-laptop-column">
         <nav className="w-25 mt-2 d-mobile-none d-tablet-none d-laptop-none">
           <ul className="pl-2">
             <li>

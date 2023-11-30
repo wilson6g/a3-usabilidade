@@ -9,7 +9,6 @@ async function buscarJogoPorNomeEUsuarioRepository(nome, fk_usuario) {
 
     return rows;
   } catch (error) {
-    console.error("Erro ao executar consulta:", error);
     throw error;
   }
 }
