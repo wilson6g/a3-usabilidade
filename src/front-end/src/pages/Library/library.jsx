@@ -76,15 +76,17 @@ export function Library() {
               <h1 className="color-white">Meus Jogos</h1>
             </div>
 
-            <div className="d-flex bc-primary flex-column align-items-center justify-content-center mt-2 h-90 w-mobile-100 color-white w-100 ">
+            <div className="d-flex bc-primary flex-column align-items-center justify-content-center h-90 w-mobile-100 color-white w-100 ">
               {games &&
                 games.map((game) => (
-                  <CardGameMyGames
-                    key={game.id}
-                    game={game}
-                    games={games}
-                    // updateMyGames={updateGames}
-                  />
+                  <div key={game.id} className="w-100 mb-2 align-items-center justify-content-center d-flex">
+                    <CardGameMyGames
+                      key={game.id}
+                      game={game}
+                      games={games}
+                      // updateMyGames={updateGames}
+                    />
+                  </div>
                 ))}
             </div>
           </div>
