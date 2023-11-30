@@ -15,16 +15,11 @@ async function alterarJogoUseCase(input) {
       jogo.fk_usuario
     );
 
-    const jogoExisteEIgual =
-      jogo.nome.toLowerCase() == jogoExistenteNome?.nome.toLowerCase()
-        ? false
-        : true;
-
     if (!jogoExistente) {
       const error = new Error("O jogo não existe.");
       error.statusCode = 404;
       throw error;
-    } else if (jogoExistenteNome?.nome && jogoExisteEIgual) {
+    } else if (jogoExistenteNome && jogo.id != jogoExistenteNome?.id) {
       const error = new Error("O jogo já existe.");
       error.statusCode = 400;
       throw error;

@@ -17,17 +17,14 @@ async function alterarPlataformaUseCase(input) {
       plataforma.nome
     );
 
-    const plataformaExisteEIgual =
-      plataforma.nome.toLowerCase() ==
-      plataformaPorNomeExistente?.nome.toLowerCase()
-        ? false
-        : true;
-
     if (!plataformaPorIdExistente) {
       const error = new Error("A plataforma não existe.");
       error.statusCode = 404;
       throw error;
-    } else if (plataformaPorNomeExistente && plataformaExisteEIgual) {
+    } else if (
+      plataformaPorNomeExistente &&
+      plataforma.id != plataformaPorNomeExistente?.id
+    ) {
       const error = new Error("A plataforma já existe.");
       error.statusCode = 400;
       throw error;
