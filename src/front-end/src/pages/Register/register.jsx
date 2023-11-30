@@ -11,7 +11,6 @@ export function Register() {
     nome: "",
     email: "",
     senha: "",
-    repetirSenha: "",
   };
   const [values, setValues] = useState(initialValues);
   const navigate = useNavigate();
@@ -100,20 +99,6 @@ export function Register() {
             }
           />
 
-          <label className="fs-3 d-flex py-5px" htmlFor="repeat-password">
-            Repetir senha:
-          </label>
-          <input
-            className="d-flex w-100 border-none text-input bg-secondary"
-            type="password"
-            name="repeat-password"
-            id="repeat-password"
-            placeholder="Repita sua senha."
-            value={values.repetirSenha}
-            onChange={(event) =>
-              setValues({ ...values, repetirSenha: event.target.value })
-            }
-          />
           <div className="d-flex w-100 fs-3 align-items-center justify-content-center m1-0625-t">
             <button
               type="submit"
