@@ -10,8 +10,10 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    const output = jwtDecode(token);
-    setUserEmail(output.email);
+    if (token != null) {
+      const output = jwtDecode(token);
+      setUserEmail(output.email);
+    }
   }, []);
 
   return (
