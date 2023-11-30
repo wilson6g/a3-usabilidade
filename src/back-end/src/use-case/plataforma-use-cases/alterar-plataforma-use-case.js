@@ -18,7 +18,10 @@ async function alterarPlataformaUseCase(input) {
     );
 
     const plataformaExisteEIgual =
-      plataforma.nome != plataformaPorNomeExistente?.nome ? true : false;
+      plataforma.nome.toLowerCase() ==
+      plataformaPorNomeExistente?.nome.toLowerCase()
+        ? false
+        : true;
 
     if (!plataformaPorIdExistente) {
       const error = new Error("A plataforma não existe.");

@@ -47,8 +47,8 @@ export function InfoGame() {
   return (
     <>
       <Header />
-      <main className="d-flex justify-content-center align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
-        <div className="d-flex flex-column align-items-center justify-content-center w-50 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
+      <main className="min-h-100 d-flex justify-content-center align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
+        <div className="d-flex flex-column align-items-center justify-content-center w-75 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
           <div className="d-flex flex-column justify-content-center align-items-center w-100 w-mobile-100 w-tablet-100 w-laptop-100 h-100">
             <h1 className="color-white fw-600 text-uppercase fw-600 py-3">
               {game?.nome}

@@ -26,41 +26,51 @@ export function CardGameMyGames(props) {
   // };
 
   return (
-    <div className="d-flex flex-mobile-column justify-mobile-content-center align-items-center mb-25px justify-content-between w-100 mt-2 bg-primary">
-      <a
+    <a
+      href={`info-game?id=${props.game?.id}`}
+      className="d-flex flex-column align-items-center justify-content-center w-90 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light"
+    >
+      <div className="d-flex flex-column align-items-center justify-content-center w-100 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
+        {/* <a
         href={`info-game?id=${props.game?.id}`}
         className="w-50 h-100 w-mobile-100 w-tablet-100 w-laptop-100 fs-15 color-white d-flex align-items-center justify-content-center"
       >
         {props.game?.nome.substr(0, 3)}
-      </a>
-      <div className="d-flex flex-column justify-content-between w-100 align-items-start h-100 white-space-nowrap overflow-hidden text-overflow-ellipsis fs-3 pt-1">
-        <div className="d-flex flex-column align-items-start justify-content-start px-2">
-          <div className="py-3 w-100 d-flex justify-content-between">
+      </a> */}
+        <div className="d-flex flex-column align-items-center justify-content-center w-75 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
+          <div className="d-flex flex-column justify-content-center align-items-center w-100 w-mobile-100 w-tablet-100 w-laptop-100 h-100">
             <a
-              className="color-white fw-600 fs-15 py-3 w-100 h-100 d-block white-space-nowrap overflow-hidden lh-18"
+              className="color-white fw-600 text-uppercase fw-600 py-3 fs-15"
               href={`info-game?id=${props.game?.id}`}
             >
               {props.game?.nome}
             </a>
-            {/* <div className="d-flex align-items-center">
-              <a
-                className="d-flex align-items-center color-white "
-                href={`./edit-game?id=${props.game?.id}`}
-              >
-                <span className="material-symbols-outlined fs-3-5">edit</span>
-              </a>
-              <a
-                className="d-flex align-items-center color-white "
-                onClick={handleDelete}
-              >
-                <span className="material-symbols-outlined fs-3-5">delete</span>
-              </a>
-            </div> */}
-          </div>
+            <div className="d-flex flex-column justify-content-start align-items-start w-100">
+              <div className="w-100 w-mobile-100 w-tablet-100 w-laptop-100">
+                <p className="color-white text-wrap text-justify w-100">
+                  <span className="fw-600">Sobre o jogo: </span>
+                  {props.game?.descricao}
+                </p>
 
-          {/* <p className="color-white">
-            <span className="fw-600">Nota: </span> {props.game?.nota}
-          </p> */}
+                <p className="color-white text-wrap text-justify w-90">
+                  <span className="fw-600">Plataforma: </span>{" "}
+                  {props.game?.plataforma_nome}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="d-flex flex-column justify-content-between w-100 align-items-start h-100 white-space-nowrap overflow-hidden text-overflow-ellipsis fs-3 pt-1">
+        <div className="d-flex flex-column align-items-start justify-content-start px-2">
+          <div className="py-3 w-100 h-100 w-mobile-100 w-tablet-100 w-laptop-100 d-flex justify-content-between">
+            <a
+              className="color-white fw-600 fs-15 py-3 w-100 h-100 d-block white-space-nowrap text-wrap  flex-wrap overflow-hidden lh-18"
+              href={`info-game?id=${props.game?.id}`}
+            >
+              {props.game?.nome}
+            </a>
+          </div>
 
           <p className="color-white text-wrap text-justify w-90">
             <span className="fw-600">Descrição do jogo: </span>
@@ -70,14 +80,14 @@ export function CardGameMyGames(props) {
           <p className="color-white">
             <span className="fw-600">Plataforma: </span>{" "}
             {props.game?.plataforma_nome}
-          </p>
+          </p> */}
 
-          {/* <p className="color-white text-wrap text-justify w-90">
+        {/* <p className="color-white text-wrap text-justify w-90">
             <span className="fw-600">Descrição da plataforma: </span>
             {props.game?.plataforma_descricao}
           </p> */}
 
-          {/* <p className="color-white text-wrap text-justify">
+        {/* <p className="color-white text-wrap text-justify">
             <span className="fw-600">Categorias: </span>
             {props.game?.categorias?.map((categoria, index) => {
               const isPenultimate = index === props.game.categorias.length - 2;
@@ -91,8 +101,9 @@ export function CardGameMyGames(props) {
                 : `${categoria.categoria_nome}, `;
             })}
           </p> */}
-        </div>
+        {/* </div> */}
       </div>
-    </div>
+    </a>
+    // </div>
   );
 }
