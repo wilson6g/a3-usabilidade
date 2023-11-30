@@ -31,7 +31,6 @@ plataformaRoutes.post("/plataforma", async (request, response) => {
       data: plataforma,
     });
   } catch (error) {
-    console.error('plataforma post', error);
     response.status(error.status).json({
       error: error.message,
     });
@@ -46,7 +45,6 @@ plataformaRoutes.get("/plataforma", async (request, response) => {
       data: categorias,
     });
   } catch (error) {
-    console.error('plataforma get', error);
     response.status(error.status).json({
       error: error.message,
     });
@@ -72,7 +70,6 @@ plataformaRoutes.get("/plataforma/:id", async (request, response) => {
       data: categoria,
     });
   } catch (error) {
-    console.error('plataforma get id', error);
     response.status(error.status).json({
       error: error.message,
     });
@@ -105,7 +102,6 @@ plataformaRoutes.put("/plataforma/:id", async (request, response) => {
       data: plataformaAtualizada,
     });
   } catch (error) {
-    console.error('plataforma put', error);
     response.status(error.status).json({
       error: error.message,
     });
@@ -129,7 +125,6 @@ plataformaRoutes.delete("/plataforma/:id", async (request, response) => {
 
     response.status(204).send();
   } catch (error) {
-    console.error('plataforma delete id', error);
     response.status(error.status).json({
       error: error.message,
     });

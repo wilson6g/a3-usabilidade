@@ -10,7 +10,6 @@ async function buscarMeusJogosCategoriaExistenteRepository(input) {
 
     return rows[0];
   } catch (error) {
-    console.error("Erro ao executar consulta:", error);
     throw error;
   }
 }

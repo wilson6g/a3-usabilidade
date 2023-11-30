@@ -158,7 +158,6 @@ jogoRoutes.delete("/jogo/:id", async (request, response) => {
 
     response.status(204).send();
   } catch (error) {
-    console.error("jogo delete", error);
     response.status(error.status).json({
       error: error.message,
     });

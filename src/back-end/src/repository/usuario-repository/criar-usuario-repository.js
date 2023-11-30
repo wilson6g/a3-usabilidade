@@ -16,7 +16,6 @@ async function criarUsuario({ usuario, nome, email, senha }) {
     // Retornar o usuário inserido
     return rows;
   } catch (error) {
-    console.error(error);
     throw error;
   }
 }

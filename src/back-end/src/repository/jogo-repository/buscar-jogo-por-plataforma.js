@@ -9,10 +9,8 @@ async function buscarJogoPorPlataformaRepository(fk_plataforma) {
 
     return rows;
   } catch (error) {
-    console.error("Erro ao executar consulta:", error);
     throw error;
   }
 }
-
 
 module.exports = buscarJogoPorPlataformaRepository;

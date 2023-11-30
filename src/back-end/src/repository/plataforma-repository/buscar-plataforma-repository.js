@@ -9,7 +9,6 @@ async function buscarPlataforma(coluna, input) {
 
     return rows;
   } catch (error) {
-    console.error("Erro ao executar consulta:", error);
     throw error;
   }
 }
