@@ -40,7 +40,7 @@ export function CardGameMyGames(props) {
         <div className="d-flex flex-column align-items-center justify-content-center w-75 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
           <div className="d-flex flex-column justify-content-center align-items-center w-100 w-mobile-100 w-tablet-100 w-laptop-100 h-100">
             <a
-              className="color-white fw-600 text-uppercase fw-600 py-3 fs-15"
+              className="color-white fw-600 text-uppercase fw-600 py-3 fs-15 text-center"
               href={`info-game?id=${props.game?.id}`}
             >
               {props.game?.nome}

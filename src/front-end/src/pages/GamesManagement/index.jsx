@@ -65,9 +65,9 @@ export function GamesManagement() {
               <div className="d-flex w-100">
                 <a
                   href="add-game"
-                  className="w-15 w-mobile-50 py-2 text-center bg-primary color-white border-rounded"
+                  className="w-15 py-2 text-center w-mobile-50 bg-primary color-white border-rounded"
                 >
-                  Adicionar Jogo
+                  Gerenciar Jogos
                 </a>
               </div>
               <GameTable

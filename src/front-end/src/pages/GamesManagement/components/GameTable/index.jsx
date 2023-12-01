@@ -9,7 +9,6 @@ GameTable.propTypes = {
 };
 
 export function GameTable(props) {
-
   const handleDelete = async (gameId) => {
     try {
       await deleteGameById(gameId);
@@ -23,7 +22,7 @@ export function GameTable(props) {
   };
 
   return (
-    <table className="w-100 w-mobile-50 color-black align-self-center">
+    <table className="w-100 color-black align-self-center">
       <thead className="color-black">
         <tr>
           {props.columns.map((column, index) => (
@@ -38,7 +37,9 @@ export function GameTable(props) {
         {props.rows.map((item, rowIndex) => (
           <tr key={rowIndex}>
             <td className="text-center">{item.nome}</td>
-            <td className="text-justify">{item.descricao}</td>
+            <td className="text-justify text-overflow-ellipses">
+              {item.descricao}
+            </td>
             <td className="text-justify">{item.nota}</td>
             <td className="text-center">{item.plataforma_nome}</td>
             <td className="text-center">

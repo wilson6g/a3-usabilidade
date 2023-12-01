@@ -47,41 +47,50 @@ export function InfoGame() {
   return (
     <>
       <Header />
-      <main className="min-h-100 d-flex justify-content-center align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
-        <div className="d-flex flex-column align-items-center justify-content-center w-75 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
-          <div className="d-flex flex-column justify-content-center align-items-center w-100 w-mobile-100 w-tablet-100 w-laptop-100 h-100">
-            <h1 className="color-white fw-600 text-uppercase fw-600 py-3">
-              {game?.nome}
+      <main className="min-h-100 d-flex justify-content-center flex-column align-items-center p1-025-t flex-mobile-column flex-tablet-column flex-laptop-column flex-1">
+        <div className="d-flex w-50 w-mobile-100 w-tablet-100 w-laptop-100 flex-column align-items-center justify-content-center">
+          <div className="justify-mobile-center justify-content-center bg-primary mb-25px d-flex align-items-center w-100 w-tablet-100 w-laptop-100 w-mobile-100 flex-mobile-column flex-tablet-column flex-laptop-column">
+            <h1 className="color-white text-center">
+              Informações sobre o jogo
             </h1>
-            <h2 className="color-white fs-3-5">
-              <span className="fw-600 ">Nota: </span> {game?.nota}
-            </h2>
-            <div className="d-flex flex-column justify-content-center align-items-center w-100">
-              <div className="w-50 w-mobile-100 w-tablet-100 w-laptop-100">
-                <p className="color-white text-wrap text-justify w-90">
-                  <span className="fw-600">Sobre o jogo: </span>
-                  {game?.descricao}
-                </p>
+          </div>
 
-                <p className="color-white text-wrap text-justify w-90">
-                  <span className="fw-600">Plataforma: </span>{" "}
-                  {game?.plataforma_nome}
-                </p>
-                <p className="color-white text-wrap text-justify w-90">
-                  <span className="fw-600">Descrição da plataforma: </span>{" "}
-                  {game?.plataforma_descricao}
-                </p>
+          <div className="d-flex flex-column align-items-center justify-content-center w-75 w-mobile-100 w-tablet-100 w-laptop-100 h-100 bg-blue border-light">
+            <div className="d-flex flex-column justify-content-center align-items-center w-100 w-mobile-100 w-tablet-100 w-laptop-100 h-100">
+              <h1 className="color-white fw-600 text-uppercase fw-600 py-3 text-center">
+                {game?.nome}
+              </h1>
+              <h2 className="color-white fs-3-5">
+                <span className="fw-600 ">Nota: </span> {game?.nota}
+              </h2>
+              <div className="d-flex flex-column justify-content-center align-items-center w-100">
+                <div className="w-50 w-mobile-100 w-tablet-100 w-laptop-100">
+                  <p className="color-white text-wrap text-justify w-90">
+                    <span className="fw-600">Sobre o jogo: </span>
+                    {game?.descricao}
+                  </p>
 
-                <p className="color-white text-wrap text-justify">
-                  <span className="fw-600">Categorias: </span>
-                  {game?.categorias?.map((categoria, index) => {
-                    const isLastCategory = index === game.categorias.length - 1;
+                  <p className="color-white text-wrap text-justify w-90">
+                    <span className="fw-600">Plataforma: </span>{" "}
+                    {game?.plataforma_nome}
+                  </p>
+                  <p className="color-white text-wrap text-justify w-90">
+                    <span className="fw-600">Descrição da plataforma: </span>{" "}
+                    {game?.plataforma_descricao}
+                  </p>
 
-                    return isLastCategory
-                      ? categoria.categoria_nome
-                      : `${categoria.categoria_nome}, `;
-                  })}
-                </p>
+                  <p className="color-white text-wrap text-justify">
+                    <span className="fw-600">Categorias: </span>
+                    {game?.categorias?.map((categoria, index) => {
+                      const isLastCategory =
+                        index === game.categorias.length - 1;
+
+                      return isLastCategory
+                        ? categoria.categoria_nome
+                        : `${categoria.categoria_nome}, `;
+                    })}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

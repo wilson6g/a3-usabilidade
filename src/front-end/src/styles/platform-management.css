@@ -12,11 +12,10 @@ body {
   /* padding: 0; */
 }
 
-
-footer {
-  /* position: fixed; */
-  bottom: 0;
-  left: 0;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 table {

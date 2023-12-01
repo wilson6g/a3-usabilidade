@@ -73,7 +73,7 @@ export function Library() {
         <div className="d-flex flex-column align-items-start w-75 h-100 w-mobile-100 w-tablet-100 w-laptop-100">
           <div className="d-flex w-75 w-mobile-100 w-tablet-100 w-laptop-100 flex-column align-items-center justify-content-center">
             <div className="justify-content-center bg-primary mb-25px d-flex align-items-center w-100 w-tablet-100 w-laptop-100 w-mobile-100 flex-mobile-column flex-tablet-column flex-laptop-column">
-              <h1 className="color-white">Meus Jogos</h1>
+              <h1 className="color-white text-center">Meus Jogos</h1>
             </div>
 
             <div className="d-flex bc-primary flex-column align-items-center justify-content-center h-90 w-mobile-100 color-white w-100 ">
