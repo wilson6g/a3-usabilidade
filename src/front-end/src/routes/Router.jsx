@@ -15,29 +15,9 @@ import { Login } from "../pages/Login";
 import { Platform } from "../pages/Platform";
 import { PlatformManagement } from "../pages/PlatformManagement";
 import { Register } from "../pages/Register/register";
+import { DeletePlatform } from "../pages/DeletePlatform";
+import { DeleteGame } from "../pages/DeleteGame";
 
-// const PrivateRoute: FC<PrivateRouterProps> = ({
-//   component: RouteComponent,
-// }) => {
-//   const { instance } = useMsal();
-//   const account = instance.getActiveAccount();
-
-//   const isAuthenticated = account !== null ? true : false;
-
-//   if (isAuthenticated) {
-//     return (
-//       <BaseLayout>
-//         <RouteComponent />
-//       </BaseLayout>
-//     );
-//   } else {
-//     toast.warn("Você não está autenticado no sistema!", {
-//       toastId: "token_expired",
-//     });
-
-//     return <Navigate to="/" />;
-//   }
-// };
 
 const Router = () => {
   return (
@@ -47,7 +27,9 @@ const Router = () => {
         <Route path="/add-game" element={<AddGame />} />
         <Route path="/add-platform" element={<AddPlatform />} />
         <Route path="/edit-game" element={<EditGame />} />
+        <Route path="/delete-game" element={<DeleteGame />} />
         <Route path="/edit-platform" element={<EditPlatform />} />
+        <Route path="/delete-platform" element={<DeletePlatform />} />
         <Route path="/games-management" element={<GamesManagement />} />
         <Route path="/info-game" element={<InfoGame />} />
         <Route path="/library" element={<Library />} />
