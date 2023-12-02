@@ -53,7 +53,6 @@ const Router = () => {
         <Route path="/library" element={<Library />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="/platform-management" element={<PlatformManagement />} />
-        {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>

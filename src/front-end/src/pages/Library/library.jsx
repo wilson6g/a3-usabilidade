@@ -4,13 +4,11 @@ import { Footer } from "../../shared/components/Footer";
 import { Header } from "../../shared/components/Header";
 import { UserContext } from "../../shared/contexts/user-context";
 import { getAllGamesByUser } from "../../shared/services/game-service/game-service";
-import { findAllPlatforms } from "../../shared/services/platforms-service/platform-service";
 import "../../styles/library.css";
 import { CardGameMyGames } from "./components/CardGameMyGames";
 
 export function Library() {
   const [games, setGames] = useState();
-  const [platforms, setPlatforms] = useState();
   const { userEmail } = useContext(UserContext);
 
   useEffect(() => {
@@ -20,9 +18,6 @@ export function Library() {
           const gamesResponse = await getAllGamesByUser(userEmail);
           setGames(gamesResponse.data);
         }
-
-        const platformsResponse = await findAllPlatforms();
-        setPlatforms(platformsResponse.data);
       } catch (error) {
         toast.error(error.response.data.message);
       }
@@ -39,20 +34,6 @@ export function Library() {
         <nav className="w-25 mt-2 d-mobile-none d-tablet-none d-laptop-none">
           <ul className="pl-2">
             <li>
-              <span className="color-black">Plataformas</span>
-              <ul className="pl-2">
-                {platforms &&
-                  platforms.map((platform) => (
-                    <li key={platform.id}>
-                      <a
-                        className="color-primary"
-                        href={`platform?platformId=${platform.id}`}
-                      >
-                        {platform.nome}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
               <span className="color-black">Gerenciar</span>
               <ul className="pl-2">
                 <li>
@@ -84,7 +65,6 @@ export function Library() {
                       key={game.id}
                       game={game}
                       games={games}
-                      // updateMyGames={updateGames}
                     />
                   </div>
                 ))}
