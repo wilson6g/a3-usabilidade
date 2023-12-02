@@ -195,16 +195,16 @@ async function createGame() {
   ];
 
   const jogoScripts = [
-    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[0]}', 'The Legend of Zelda: Breath of the Wild', 'Um jogo de aventura incrível com gráficos impressionantes e uma história envolvente.', 5, '${plataformaUuids[0]}', '${userEmails[0]}')`,
+    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[0]}', 'The Legend of Zelda', 'Um jogo de aventura incrível com gráficos impressionantes e uma história envolvente.', 5, '${plataformaUuids[0]}', '${userEmails[0]}')`,
     `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[1]}', 'Red Dead Redemption 2', 'Um épico de ação no velho oeste, com um mundo aberto vasto e detalhado.', 1, '${plataformaUuids[1]}', '${userEmails[1]}')`,
-    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[2]}', 'The Witcher 3: Wild Hunt', 'Um RPG com uma história profunda, missões envolventes e belos gráficos.', 4, '${plataformaUuids[2]}', '${userEmails[2]}')`,
+    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[2]}', 'The Witcher 3', 'Um RPG com uma história profunda, missões envolventes e belos gráficos.', 4, '${plataformaUuids[2]}', '${userEmails[2]}')`,
     `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[3]}', 'God of War', 'Ação intensa com gráficos impressionantes e uma narrativa emocionante.', 2, '${plataformaUuids[3]}', '${userEmails[3]}')`,
     `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[4]}', 'Fortnite', 'Um jogo de batalha real muito popular com uma comunidade vasta.', 3, '${plataformaUuids[4]}', '${userEmails[4]}')`,
     `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[5]}', 'Minecraft', 'Um jogo de construção com infinitas possibilidades e criatividade.', 4, '${plataformaUuids[5]}', '${userEmails[5]}')`,
     `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[6]}', 'Overwatch', 'Um shooter online com personagens únicos e mecânicas de jogo competitivas.', 5, '${plataformaUuids[6]}', '${userEmails[6]}')`,
     `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[7]}', 'FIFA 22', 'Um simulador de futebol com gráficos realistas e jogabilidade imersiva.', 1, '${plataformaUuids[7]}', '${userEmails[7]}')`,
-    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[8]}', 'Animal Crossing: New Horizons', 'Um jogo relaxante onde você pode construir sua própria ilha e interagir com amigos.', 3, '${plataformaUuids[8]}', '${userEmails[8]}')`,
-    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[9]}', 'Call of Duty: Warzone', 'Um jogo de tiro gratuito com modos de batalha e ação intensa.', 2, '${plataformaUuids[9]}', '${userEmails[9]}')`,
+    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[8]}', 'Animal Crossing', 'Um jogo relaxante onde você pode construir sua própria ilha e interagir com amigos.', 3, '${plataformaUuids[8]}', '${userEmails[8]}')`,
+    `INSERT INTO ${env.database}.jogo (id, nome, descricao, nota, fk_plataforma, fk_usuario) VALUES ('${uuids[9]}', 'Call of Duty', 'Um jogo de tiro gratuito com modos de batalha e ação intensa.', 2, '${plataformaUuids[9]}', '${userEmails[9]}')`,
   ];
 
   try {
