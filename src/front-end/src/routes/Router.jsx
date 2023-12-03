@@ -17,7 +17,7 @@ import { PlatformManagement } from "../pages/PlatformManagement";
 import { Register } from "../pages/Register/register";
 import { DeletePlatform } from "../pages/DeletePlatform";
 import { DeleteGame } from "../pages/DeleteGame";
-
+import { Documentation } from "../pages/Documentation";
 
 const Router = () => {
   return (
@@ -34,6 +34,7 @@ const Router = () => {
         <Route path="/info-game" element={<InfoGame />} />
         <Route path="/library" element={<Library />} />
         <Route path="/platform" element={<Platform />} />
+        <Route path="/documentation" element={<Documentation />} />
         <Route path="/platform-management" element={<PlatformManagement />} />
         <Route path="/register" element={<Register />} />
       </Routes>

@@ -67,7 +67,7 @@ export function GamesManagement() {
                   href="add-game"
                   className="w-15 py-2 text-center w-mobile-50 bg-primary color-white border-rounded"
                 >
-                  Gerenciar Jogos
+                  Adicionar Jogos
                 </a>
               </div>
               <GameTable

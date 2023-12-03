@@ -30,13 +30,16 @@ export function Header() {
             </a>
           </li>
           <li>
-            <a className="text-uppercase color-secondary py-2" href="documentation">
-              Documentação
+            <a className="text-uppercase color-secondary py-2" href="platform">
+              Jogos por plataformas
             </a>
           </li>
           <li>
-            <a className="text-uppercase color-secondary py-2" href="platform">
-              Jogos por plataformas
+            <a
+              className="text-uppercase color-secondary py-2"
+              href="documentation"
+            >
+              Documentação
             </a>
           </li>
           <li>
