@@ -1,6 +1,4 @@
 import { PropTypes } from "prop-types";
-import { toast } from "react-toastify";
-import { deleteGameById } from "../../../../shared/services/game-service/game-service";
 
 GameTable.propTypes = {
   columns: PropTypes.array,
@@ -9,18 +7,6 @@ GameTable.propTypes = {
 };
 
 export function GameTable(props) {
-  const handleDelete = async (gameId) => {
-    try {
-      await deleteGameById(gameId);
-      toast.success("Jogo deletado com sucesso!");
-
-      const updatedRows = props.rows.filter((item) => item.id !== gameId);
-      props.updateRows(updatedRows);
-    } catch (error) {
-      toast.error(error.response.data.error);
-    }
-  };
-
   return (
     <table className="w-100 color-black align-self-center">
       <thead className="color-black">
@@ -46,7 +32,7 @@ export function GameTable(props) {
               <a className="color-black" href={`./edit-game?id=${item.id}`}>
                 <span className="material-symbols-outlined">edit</span>
               </a>
-              <a className="color-black" onClick={() => handleDelete(item.id)}>
+              <a className="color-black" href={`./delete-game?id=${item.id}`}>
                 <span className="material-symbols-outlined">delete</span>
               </a>
             </td>

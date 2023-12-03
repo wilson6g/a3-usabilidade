@@ -7,7 +7,7 @@ import { UserContext } from "../../shared/contexts/user-context";
 import { useQuery } from "../../shared/hooks/UseQuery";
 import { getAllGamesByUser } from "../../shared/services/game-service/game-service";
 import { findAllPlatforms } from "../../shared/services/platforms-service/platform-service";
-import "../../styles/profile.css";
+import "../../styles/global.css";
 
 export function Platform() {
   let query = useQuery();

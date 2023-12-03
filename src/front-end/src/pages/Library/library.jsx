@@ -4,14 +4,21 @@ import { Footer } from "../../shared/components/Footer";
 import { Header } from "../../shared/components/Header";
 import { UserContext } from "../../shared/contexts/user-context";
 import { getAllGamesByUser } from "../../shared/services/game-service/game-service";
-import { findAllPlatforms } from "../../shared/services/platforms-service/platform-service";
 import "../../styles/library.css";
 import { CardGameMyGames } from "./components/CardGameMyGames";
 
 export function Library() {
   const [games, setGames] = useState();
-  const [platforms, setPlatforms] = useState();
+  const [game, setGame] = useState();
   const { userEmail } = useContext(UserContext);
+
+  const getGameById = () => {
+    const filter = game != "*" ? game : "*";
+
+    const output = games && games.find((game) => game.id == filter);
+
+    setGame(output?.id);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,10 +26,8 @@ export function Library() {
         if (userEmail !== "") {
           const gamesResponse = await getAllGamesByUser(userEmail);
           setGames(gamesResponse.data);
+          getGameById();
         }
-
-        const platformsResponse = await findAllPlatforms();
-        setPlatforms(platformsResponse.data);
       } catch (error) {
         toast.error(error.response.data.message);
       }
@@ -39,20 +44,6 @@ export function Library() {
         <nav className="w-25 mt-2 d-mobile-none d-tablet-none d-laptop-none">
           <ul className="pl-2">
             <li>
-              <span className="color-black">Plataformas</span>
-              <ul className="pl-2">
-                {platforms &&
-                  platforms.map((platform) => (
-                    <li key={platform.id}>
-                      <a
-                        className="color-primary"
-                        href={`platform?platformId=${platform.id}`}
-                      >
-                        {platform.nome}
-                      </a>
-                    </li>
-                  ))}
-              </ul>
               <span className="color-black">Gerenciar</span>
               <ul className="pl-2">
                 <li>
@@ -75,19 +66,45 @@ export function Library() {
             <div className="justify-content-center bg-primary mb-25px d-flex align-items-center w-100 w-tablet-100 w-laptop-100 w-mobile-100 flex-mobile-column flex-tablet-column flex-laptop-column">
               <h1 className="color-white text-center">Meus Jogos</h1>
             </div>
+            <div className="d-flex w-100 align-items-center justify-content-center py-4">
+              <div className="d-flex w-30 w-mobile-100 w-tablet-100 justify-content-center align-items-center border-light bg-blue">
+                <select
+                  className="w-100 d-flex text-center color-white bg-blue border-light p-2 color-white border-none bg-black border-none fs-3 fw-200"
+                  onChange={(event) => setGame(event.target.value)}
+                  value={game}
+                >
+                  <option value="*">Todos Jogos</option>
+                  {games &&
+                    games.map((platform) => (
+                      <option key={platform.id} value={platform.id}>
+                        {platform.nome}
+                      </option>
+                    ))}
+                </select>
+              </div>
+            </div>
 
             <div className="d-flex bc-primary flex-column align-items-center justify-content-center h-90 w-mobile-100 color-white w-100 ">
               {games &&
-                games.map((game) => (
-                  <div key={game.id} className="w-100 mb-2 align-items-center justify-content-center d-flex">
-                    <CardGameMyGames
+                games
+                  .filter(
+                    (gameItem) =>
+                      !game ||
+                      game === "*" ||
+                      gameItem.id === game
+                  )
+                  .map((game) => (
+                    <div
                       key={game.id}
-                      game={game}
-                      games={games}
-                      // updateMyGames={updateGames}
-                    />
-                  </div>
-                ))}
+                      className="w-100 mb-2 align-items-center justify-content-center d-flex"
+                    >
+                      <CardGameMyGames
+                        key={game.id}
+                        game={game}
+                        games={games}
+                      />
+                    </div>
+                  ))}
             </div>
           </div>
         </div>
