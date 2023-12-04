@@ -18,29 +18,45 @@ async function executeSQL(sql) {
 }
 
 async function createDatabase() {
-  const poolWithoutDB = mysql.createPool({
-    connectionLimit: 10,
-    host: env.host,
-    user: env.user,
-    password: env.password,
-  });
+  const maxRetries = 10;
+  let connection = null;
 
-  try {
-    // Create a connection without specifying a database
-    const connection = await poolWithoutDB.getConnection();
+  for (let i = 0; i <= maxRetries; i++) {
+    try {
+      const poolWithoutDB = mysql.createPool({
+        connectionLimit: 10,
+        host: env.host,
+        user: env.user,
+        password: env.password,
+        port: env.port,
+      });
 
-    // Create the database
-    await connection.query(
-      `CREATE DATABASE IF NOT EXISTS \`${env.database}\`;`
-    );
+      connection = await poolWithoutDB.getConnection();
 
-    // Release the connection
-    connection.release();
+      await connection.query(
+        `CREATE DATABASE IF NOT EXISTS \`${env.database}\`;`
+      );
 
-    console.log(`Database '${env.database}' created successfully.`);
-  } catch (error) {
-    console.error("Error creating database:", error);
+      connection.release();
+
+      console.log(`Database '${env.database}' created successfully.`);
+      break;
+    } catch (error) {
+      console.error("Error creating database:", error);
+      if (i === maxRetries) {
+        console.error("Maximum retries reached. Database creation failed.");
+      } else {
+        // Close the connection and retry after a delay
+        if (connection) connection.release();
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait for 2 seconds before retrying
+        console.log(
+          `Retrying database creation. Attempt ${i + 1} of ${maxRetries + 1}`
+        );
+      }
+    }
   }
+
+  return true;
 }
 
 async function createTables() {
@@ -317,16 +333,45 @@ async function createGameCategory() {
   }
 }
 
-async function initDatabaseData() {
-  await createUsers();
-  await createPlatforms();
-  await createCategory();
-  await createGame();
-  await createGameCategory();
+async function initDatabase() {
+  try {
+    const createdDatabase = await createDatabase();
+
+    if (createdDatabase) {
+      await createTables();
+      console.log("foi createTables");
+      await createUsers();
+      console.log("foi createUsers");
+      await createPlatforms();
+      console.log("foi createPlatforms");
+      await createCategory();
+      console.log("foi createCategory");
+      await createGame();
+      console.log("foi createGame");
+      await createGameCategory();
+      console.log("foi createGameCategory");
+    }
+  } catch (error) {
+    console.error("Erro ao inicializar o banco de dados:", error);
+  }
 }
+
+// async function init() {
+//   try {
+//     const createdDatabase = await createDatabase();
+
+//     if(createdDatabase) {
+//       await createTables();
+//       await createProducts();
+//       await createClients();
+//     }
+//   } catch (error) {
+//     console.error("Erro ao inicializar o banco de dados:", error);
+//   }
+// }
 
 module.exports = {
   createDatabase,
   createTables,
-  initDatabaseData,
+  initDatabase,
 };

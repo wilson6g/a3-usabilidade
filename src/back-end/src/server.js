@@ -6,21 +6,17 @@ const plataformaRoutes = require("./routes/plataforma-router");
 const jogoRoutes = require("./routes/jogo-router");
 const cors = require("cors");
 const {
-  createDatabase,
-  createTables,
-  createUsers,
-  initDatabaseData
+  initDatabase
 } = require("./config/init-database");
 
 require("dotenv").config();
 
 (async () => {
   if (env.synchronize === true) {
-    await createDatabase();
-    await createTables();
-    await initDatabaseData();
+    await initDatabase();
   }
 })();
+
 const server = express();
 
 server.use(express.json());
