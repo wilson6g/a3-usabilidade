@@ -1,14 +1,11 @@
 const apagarJogoCategoriaDTO = require("../../dto/jogo-categoria-dto/apagar-jogo-categoria-dto");
 const apagarJogoCategoriaRepository = require("../../repository/jogo-categoria-repository/apagar-jogo-categoria-repository");
 const buscarMeusJogosCategoriaExistenteRepository = require("../../repository/jogo-categoria-repository/buscar-jogo-categoria-existente");
-const apagarJogoRepository = require("../../repository/jogo-repository/apagar-jogo-repository");
-const buscarJogoPorIdRepository = require("../../repository/jogo-repository/buscar-jogo-por-id");
 
 async function excluirJogoCategoriaUseCase(input) {
   try {
     const meusJogosCategoria = apagarJogoCategoriaDTO(input);
 
-    // Cria um array de promessas de busca das categorias existentes
     const promisesBuscaCategoria = meusJogosCategoria.fk_categoria.map(
       async (categoria) => {
         const categoriaExistente =
@@ -20,12 +17,10 @@ async function excluirJogoCategoriaUseCase(input) {
       }
     );
 
-    // Aguarda todas as promessas serem resolvidas
     const categoriasExistenteResultados = await Promise.all(
       promisesBuscaCategoria
     );
 
-    // Verifica se alguma categoria existente foi encontrada
     const existeCategoriaExistente = categoriasExistenteResultados.some(
       (categoria) => categoria
     );
@@ -45,7 +40,6 @@ async function excluirJogoCategoriaUseCase(input) {
       }
     );
 
-    // Aguarda todas as promessas serem resolvidas
     const promisesApagarJogoCategoriaAguardar = await Promise.all(
       promisesApagarJogoCategoria
     );

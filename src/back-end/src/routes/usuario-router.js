@@ -19,7 +19,7 @@ usuarioRoutes.post("/registrar", async (request, response) => {
 
     const usuario = await criarUsuarioUseCase(input);
 
-    response.status(201).json({
+    return response.status(201).json({
       data: usuario,
     });
   } catch (error) {
@@ -41,10 +41,9 @@ usuarioRoutes.post("/login", async (request, response) => {
         status: 422,
       };
     }
-
     const usuario = await loginUsuarioUseCase(input);
 
-    response.status(201).json({
+    return response.status(201).json({
       data: usuario,
     });
   } catch (error) {
@@ -53,7 +52,5 @@ usuarioRoutes.post("/login", async (request, response) => {
     });
   }
 });
-
-usuarioRoutes.get("/usuario/:id", (request, response) => {});
 
 module.exports = usuarioRoutes;

@@ -1,6 +1,4 @@
 const criarJogoDto = require("../../dto/jogo-dto/criar-jogo-dto");
-const validarCamposCriarJogo =
-  require("../../controllers/jogo-controller").validarCamposCriarJogo;
 const criarJogoRepository = require("../../repository/jogo-repository/criar-jogo-repository");
 const buscarJogoPorNomeEUsuarioRepository = require("../../repository/jogo-repository/buscar-jogo-por-nome-e-usuario-repository");
 const criarJogoCategoriaUseCase = require("../jogo-categoria-use-cases/criar-jogo-categoria-use-case");

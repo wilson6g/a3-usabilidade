@@ -2,9 +2,9 @@ const listarJogosRepository = require("../../repository/jogo-repository/listar-j
 
 async function listarJogoUseCase() {
   try {
-    const plataformas = await listarJogosRepository();
+    const jogos = await listarJogosRepository();
 
-    return plataformas;
+    return jogos;
   } catch (error) {
     throw new Error(`Erro ao listar os jogos: ${error.message}`);
   }

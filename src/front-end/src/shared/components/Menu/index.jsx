@@ -82,6 +82,14 @@ export function Menu() {
           <li>
             <a
               className="text-uppercase text-center color-secondary py-2"
+              href="documentation"
+            >
+              Documentação
+            </a>
+          </li>
+          <li>
+            <a
+              className="text-uppercase text-center color-secondary py-2"
               href="login"
               id="sair"
               onClick={logout}

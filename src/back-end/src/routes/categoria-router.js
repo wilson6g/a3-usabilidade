@@ -20,7 +20,7 @@ categoriaRoutes.post("/categoria", async (request, response) => {
 
     const categoria = await criarCategoriaUseCase(input);
 
-    response.status(201).json({
+    return response.status(201).json({
       data: categoria,
     });
   } catch (error) {
@@ -34,7 +34,7 @@ categoriaRoutes.get("/categoria", async (request, response) => {
   try {
     const categorias = await listarCategoriasUseCase();
 
-    response.status(200).json({
+    return response.status(200).json({
       data: categorias,
     });
   } catch (error) {

@@ -31,7 +31,7 @@ jogoRoutes.post("/jogo", async (request, response) => {
 
     const jogo = await criarJogoUseCase(input);
 
-    response.status(201).json({
+    return response.status(201).json({
       data: jogo,
     });
   } catch (error) {
@@ -45,7 +45,7 @@ jogoRoutes.get("/jogo", async (request, response) => {
   try {
     const jogo = await listarJogoUseCase();
 
-    response.status(200).json({
+    return response.status(200).json({
       data: jogo,
     });
   } catch (error) {
@@ -70,7 +70,7 @@ jogoRoutes.get("/jogo/usuario/:fk_usuario", async (request, response) => {
 
     const jogo = await buscarJogoUsuarioUseCase(input);
 
-    response.status(200).json({
+    return response.status(200).json({
       data: jogo,
     });
   } catch (error) {
@@ -95,7 +95,7 @@ jogoRoutes.get("/jogo/:id", async (request, response) => {
 
     const jogo = await buscarJogoPorIdUseCase(input);
 
-    response.status(200).json({
+    return response.status(200).json({
       data: jogo,
     });
   } catch (error) {
@@ -131,7 +131,7 @@ jogoRoutes.put("/jogo/:id", async (request, response) => {
 
     const jogoAtualizado = await alterarJogoUseCase(input);
 
-    response.status(200).json({
+    return response.status(200).json({
       data: jogoAtualizado,
     });
   } catch (error) {
@@ -156,7 +156,7 @@ jogoRoutes.delete("/jogo/:id", async (request, response) => {
 
     await excluirJogoUseCase(input);
 
-    response.status(204).send();
+    return response.status(204).send();
   } catch (error) {
     response.status(error.status).json({
       error: error.message,
