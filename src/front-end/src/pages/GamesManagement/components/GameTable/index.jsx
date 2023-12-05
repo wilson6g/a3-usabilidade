@@ -26,8 +26,8 @@ export function GameTable(props) {
             <td className="text-justify text-overflow-ellipses">
               {item.descricao}
             </td>
-            <td className="text-justify">{item.nota}</td>
-            <td className="text-center">{item.plataforma_nome}</td>
+            {/* <td className="text-justify">{item.nota}</td> */}
+            {/* <td className="text-center">{item.plataforma_nome}</td> */}
             <td className="text-center">
               <a className="color-black" href={`./edit-game?id=${item.id}`}>
                 <span className="material-symbols-outlined">edit</span>

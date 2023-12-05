@@ -16,12 +16,12 @@ export function GamesManagement() {
     {
       name: "Descrição",
     },
-    {
-      name: "Nota",
-    },
-    {
-      name: "Plataforma",
-    },
+    // {
+    //   name: "Nota",
+    // },
+    // {
+    //   name: "Plataforma",
+    // },
   ]);
   const { userEmail } = useContext(UserContext);
 
@@ -39,6 +39,12 @@ export function GamesManagement() {
 
     fetchData();
   }, [userEmail]);
+
+  const rowsTable = rows.map((row) => ({
+    nome: row.nome,
+    id: row.id,
+    descricao: row.descricao,
+  }))
 
   const updateRows = (updatedRows) => {
     setRows(updatedRows);
@@ -72,7 +78,7 @@ export function GamesManagement() {
               </div>
               <GameTable
                 columns={columns}
-                rows={rows}
+                rows={rowsTable}
                 updateRows={updateRows}
               />
             </div>
