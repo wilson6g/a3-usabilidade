@@ -56,10 +56,8 @@ export function EditGame() {
 
   const tratarCampos = () => {
     if (values.fk_plataforma === "") {
-      // Caso nenhuma opção válida tenha sido selecionada, exibe uma mensagem de erro ou toma alguma ação
-      // Por exemplo, pode exibir uma mensagem de erro para o usuário:
       toast.warning("Por favor, selecione uma plataforma válida.");
-      return; // Impede o envio do formulário se a opção não for válida
+      return;
     }
 
     return true;
@@ -75,7 +73,6 @@ export function EditGame() {
         };
 
         await updateGameById(values.id, updatedValues);
-        // await createGame(values);
         toast.success("Jogo atualizado com sucesso!");
         navigate("/games-management");
       } catch (error) {

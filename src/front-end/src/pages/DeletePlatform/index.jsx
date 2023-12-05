@@ -16,7 +16,6 @@ export function DeletePlatform() {
     descricao: "",
   };
   const [values, setValues] = useState(initialValues);
-  // const [game, setGame] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,25 +33,12 @@ export function DeletePlatform() {
 
     try {
       await deletePlatformById(values.id, values);
-      toast.success("Jogo deletado com sucesso!");
-      // await createGame(values);
+      toast.success("Plataforma deletada com sucesso!");
       navigate("/platform-management");
     } catch (error) {
       toast.error(error.response.data.error);
     }
   };
-
-  // const handleDelete = async (gameId) => {
-  //   try {
-  //     await deletePlatformById(gameId);
-  //     toast.success("Jogo deletado com sucesso!");
-
-  //     const updatedRows = props.rows.filter((item) => item.id !== gameId);
-  //     props.updateRows(updatedRows);
-  //   } catch (error) {
-  //     toast.error(error.response.data.error);
-  //   }
-  // };
 
   return (
     <>

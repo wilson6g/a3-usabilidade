@@ -34,10 +34,8 @@ export function AddGame() {
 
   const tratarCampos = () => {
     if (values.fk_plataforma === "") {
-      // Caso nenhuma opção válida tenha sido selecionada, exibe uma mensagem de erro ou toma alguma ação
-      // Por exemplo, pode exibir uma mensagem de erro para o usuário:
       toast.warning("Por favor, selecione uma plataforma válida.");
-      return; // Impede o envio do formulário se a opção não for válida
+      return;
     } else if (values.nota === "") {
       toast.warning("Por favor, selecione uma plataforma válida.");
       return;

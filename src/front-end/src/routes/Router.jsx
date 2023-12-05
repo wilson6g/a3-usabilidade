@@ -1,8 +1,3 @@
-// interface PrivateRouterProps {
-//   component: ComponentType;
-//   path?: string;
-// }
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AddGame } from "../pages/AddGame";
 import { AddPlatform } from "../pages/AddPlatform";

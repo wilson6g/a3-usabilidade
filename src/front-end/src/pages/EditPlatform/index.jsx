@@ -8,7 +8,8 @@ import {
   getPlatformById,
   updatePlatformById,
 } from "../../shared/services/platforms-service/platform-service";
-import '../../styles/edit-platform.css';
+import "../../styles/edit-platform.css";
+
 export function EditPlatform() {
   let query = useQuery();
   const initialValues = {
@@ -16,7 +17,6 @@ export function EditPlatform() {
     descricao: "",
   };
   const [values, setValues] = useState(initialValues);
-  // const [game, setGame] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,23 +29,11 @@ export function EditPlatform() {
     });
   }, []);
 
-  // const tratarCampos = () => {
-  //   if (values.fk_plataforma === "") {
-  //     // Caso nenhuma opção válida tenha sido selecionada, exibe uma mensagem de erro ou toma alguma ação
-  //     // Por exemplo, pode exibir uma mensagem de erro para o usuário:
-  //     toast.warning("Por favor, selecione uma plataforma válida.");
-  //     return; // Impede o envio do formulário se a opção não for válida
-  //   }
-
-  //   return true;
-  // };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
       await updatePlatformById(values.id, values);
-      // await createGame(values);
       toast.success("Plataforma atualizada com sucesso!");
       navigate("/platform-management");
     } catch (error) {

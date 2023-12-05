@@ -45,7 +45,6 @@ export function DeleteGame() {
 
     try {
       await deleteGameById(values.id);
-      // await createGame(values);
       toast.success("Jogo deletado com sucesso!");
       navigate("/games-management");
     } catch (error) {
