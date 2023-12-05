@@ -1,15 +1,13 @@
 const bcrypt = require("bcrypt");
 
 async function descriptografarSenha(loginPassword, storedHash) {
-  return new Promise((resolve, reject) => {
-    bcrypt.compare(loginPassword, storedHash, (error, result) => {
-      if (error) {
-        reject(error);
-      } else {
-        resolve(result);
-      }
-    });
-  });
+  try {
+    const resultado = await bcrypt.compare(loginPassword, storedHash);
+    return resultado;
+  } catch (error) {
+    console.error("Erro ao comparar senhas:", error);
+    throw error;
+  }
 }
 
 module.exports = descriptografarSenha;

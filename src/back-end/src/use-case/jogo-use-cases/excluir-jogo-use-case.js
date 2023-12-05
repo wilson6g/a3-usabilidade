@@ -1,5 +1,4 @@
 const apagarJogoRepository = require("../../repository/jogo-repository/apagar-jogo-repository");
-const buscarJogoPorIdRepository = require("../../repository/jogo-repository/buscar-jogo-por-id");
 const excluirJogoCategoriaUseCase = require("../jogo-categoria-use-cases/excluir-jogo-categoria-use-case");
 const buscarJogoPorIdUseCase = require("./buscar-jogo-id-use-case");
 

@@ -1,6 +1,5 @@
 const buscarPlataformasRepository = require("../../repository/plataforma-repository/buscar-plataforma-repository");
 const apagarPlataformasRepository = require("../../repository/plataforma-repository/apagar-plataforma-repository");
-const buscarJogoPorCategoriaExistenteRepository = require("../../repository/jogo-categoria-repository/buscar-por-categoria-existente copy");
 const buscarJogoPorPlataformaRepository = require("../../repository/jogo-repository/buscar-jogo-por-plataforma");
 
 async function excluirPlataformaUseCase(input) {

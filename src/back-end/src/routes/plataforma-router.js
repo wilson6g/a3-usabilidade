@@ -27,7 +27,7 @@ plataformaRoutes.post("/plataforma", async (request, response) => {
 
     const plataforma = await criarPlataformaUseCase(input);
 
-    response.status(201).json({
+    return response.status(201).json({
       data: plataforma,
     });
   } catch (error) {
@@ -41,7 +41,7 @@ plataformaRoutes.get("/plataforma", async (request, response) => {
   try {
     const categorias = await listarPlataformasUseCase();
 
-    response.status(200).json({
+    return response.status(200).json({
       data: categorias,
     });
   } catch (error) {
@@ -66,7 +66,7 @@ plataformaRoutes.get("/plataforma/:id", async (request, response) => {
 
     const categoria = await buscarPlataformaUseCase(input);
 
-    response.status(200).json({
+    return response.status(200).json({
       data: categoria,
     });
   } catch (error) {
@@ -98,7 +98,7 @@ plataformaRoutes.put("/plataforma/:id", async (request, response) => {
 
     const plataformaAtualizada = await alterarPlataformaUseCase(input);
 
-    response.status(200).json({
+    return response.status(200).json({
       data: plataformaAtualizada,
     });
   } catch (error) {
@@ -123,7 +123,7 @@ plataformaRoutes.delete("/plataforma/:id", async (request, response) => {
 
     await excluirPlataformaUseCase(input);
 
-    response.status(204).send();
+    return response.status(204).send();
   } catch (error) {
     response.status(error.status).json({
       error: error.message,

@@ -2,7 +2,6 @@ const database = require("./database");
 const env = require("../config/env-database-config");
 const mysql = require("mysql2/promise");
 const criptografarSenha = require("../util/criptografar-senha");
-const crypto = require("crypto");
 
 async function executeSQL(sql) {
   try {
@@ -339,17 +338,11 @@ async function initDatabase() {
 
     if (createdDatabase) {
       await createTables();
-      console.log("foi createTables");
       await createUsers();
-      console.log("foi createUsers");
       await createPlatforms();
-      console.log("foi createPlatforms");
       await createCategory();
-      console.log("foi createCategory");
       await createGame();
-      console.log("foi createGame");
       await createGameCategory();
-      console.log("foi createGameCategory");
     }
   } catch (error) {
     console.error("Erro ao inicializar o banco de dados:", error);
