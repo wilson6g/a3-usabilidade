@@ -18,7 +18,7 @@ export function AddPlatform() {
     event.preventDefault();
     try {
       await createPlatform(values);
-      toast.success("Plataforma criado com sucesso!");
+      toast.success("Plataforma criada com sucesso!");
       navigate("/platform-management");
     } catch (error) {
       toast.error(error.response.data.error);
